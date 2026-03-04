@@ -129,6 +129,7 @@
     {"name":"inst_21CFB0B4","path":"rooms/tower_1/tower_1.yy",},
     {"name":"inst_64AE85DF","path":"rooms/tower_1/tower_1.yy",},
     {"name":"inst_278D5B0B","path":"rooms/tower_1/tower_1.yy",},
+    {"name":"inst_3824AD01","path":"rooms/tower_1/tower_1.yy",},
   ],
   "isDnd": false,
   "layers": [
@@ -255,6 +256,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_21CFB0B4","colour":4294967295,"frozen":false,"hasCreationCode":true,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_pumpkinviewer","path":"objects/obj_pumpkinviewer/obj_pumpkinviewer.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2848.0,"y":416.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_64AE85DF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_costumedpepperman","path":"objects/obj_costumedpepperman/obj_costumedpepperman.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1728.0,"y":864.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_278D5B0B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_halloweenjumpscare","path":"objects/obj_halloweenjumpscare/obj_halloweenjumpscare.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2689.0,"y":1336.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_3824AD01","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"objectId":{"name":"obj_mainmenu_characterswitch","path":"objects/obj_mainmenu_characterswitch/obj_mainmenu_characterswitch.yy",},"properties":[],"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":576.0,"y":1536.0,},
       ],"layers":[],"properties":[],"userdefinedDepth":false,"visible":true,},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Assets_1","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_605AC435","animationSpeed":1.0,"colour":4294967295,"frozen":false,"headPosition":0.0,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"spriteId":{"name":"spr_lamp","path":"sprites/spr_lamp/spr_lamp.yy",},"x":448.0,"y":1280.0,},

@@ -167,3 +167,6 @@ PizzaTower_GM2.resource_order
 !sprites/spr_pepperman_portrait/**
 !sprites/spr_pepperman_portraitN/**
 !sprites/spr_pepperman_move/**
+!sprites/spr_characterswitch_icon/**
+!sprites/spr_characterswitch_arrowprev/**
+!sprites/spr_characterswitch_arrownext/**

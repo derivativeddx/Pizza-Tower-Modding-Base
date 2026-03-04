@@ -319,6 +319,8 @@ enum states
 
 #macro ANIMATION_END floor(image_index) == (image_number - 1)
 
+
+
 var data_arr = [get_save_folder() + "/saveData1", get_save_folder() + "/saveData2", get_save_folder() + "/saveData3"];
 for (var i = 0; i < array_length(data_arr); i++)
 {
