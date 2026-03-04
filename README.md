@@ -17,9 +17,10 @@ This project is aimed at creating a sustainable and easily extendable base for P
 
 1. Download the latest version of [UndertaleModTool](https://github.com/UnderminersTeam/UndertaleModTool/releases/latest) and install [Gamemaker 2023.1.1.62](https://gms.yoyogames.com/GameMaker-Installer-2023.1.1.62.exe).
 2. Open the `data.win` file from your Pizza Tower install folder in UTMT (you can find it by right-clicking Pizza Tower in your library and pressing `Browse local files`)
-3. In UTMT, open `Scripts -> Run other script...` and select `SpriteRipper.csx` from the root of the project folder.
-4. When the script will finish extracting all sprites, delete `.gitignore` and move the folder somewhere else.
-5. Done! Now you can open this project in GameMaker.
+3. In UTMT, open `Scripts -> Run other script...` and select `SpriteRipper.csx` from the root of the project folder
+4. Select the root folder of the project (the one that contains `PizzaTower_GM2.yyp`)
+5. When the script will finish extracting all sprites, delete `.gitignore` and move the folder somewhere else
+6. Done! Now you can open this project in GameMaker.
 
 ## Credits
 - **setupwitch** for creating Pizza Tower EXtracted and making PT: Optimized possible
