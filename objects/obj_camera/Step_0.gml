@@ -1,5 +1,4 @@
-
-player = (obj_player1.spotlight == true) ? obj_player1 : obj_player2;
+player = obj_player1;
 if (!instance_exists(obj_pizzaball))
 {
 	targetgolf = noone;
@@ -26,7 +25,6 @@ else
 		healthold = global.hp;
 	}
 }
-p2pdistancex = 0;
 if (floor(image_index) == 10)
 {
 	shoving = false;
@@ -210,11 +208,31 @@ if (instance_exists(player) && !lock && player.state != states.timesup && player
 			}
 			var cam_x, cam_y;
 
-			cam_x = (tx - (cam_width / 2)) + chargecamera + p2pdistancex;
-			cam_y = ty - (cam_height / 2) - 50;
-			cam_x = clamp(cam_x, 0, room_width - cam_width);
-			cam_y = clamp(cam_y, 0, room_height - cam_height);
-			camera_zoom(1, 0.035);
+			if (targetgolf == noone)
+			{
+			    if (room == characterselect || room == Realtitlescreen)
+			    {
+			        cam_x = (tx - (cam_width / 2)) + chargecamera;
+			        cam_y = ty - (cam_height / 2) - 50;
+			        cam_x = clamp(cam_x, 0, room_width - cam_width);
+			        cam_y = clamp(cam_y, 0, room_height - cam_height);
+			        camera_zoom(1, 0.035);
+			    }
+			    else
+			    {
+			        cam_x = (tx - (cam_width / 2)) + chargecamera;
+			        cam_y = ty - (cam_height / 2) - 50;
+			        cam_x = clamp(cam_x, 0, room_width - cam_width);
+			        cam_y = clamp(cam_y, 0, room_height - cam_height);
+			    }
+			}
+			else
+			{
+			    cam_x = ((player.x + targetgolf.x) / 2) - (cam_width / 2);
+			    cam_y = ((player.y + targetgolf.y) / 2) - (cam_height / 2) - 50;
+			    cam_x = clamp(cam_x, 0, room_width - cam_width);
+			    cam_y = clamp(cam_y, 0, room_height - cam_height);
+			}
 
 			if (shake_mag != 0 && global.option_screenshake)
 			{
