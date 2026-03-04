@@ -108,6 +108,14 @@ void ProcessSprite(string sprDir)
     if (tilesetSprites.Contains(spriteName))
         return;
 
+    // Skip if sprite folder already contains PNG files
+    if (Directory.GetFiles(sprDir, "*.png").Any())
+    {
+        Console.WriteLine($"Skipping {spriteName} - already contains images");
+        IncrementProgressParallel();
+        return;
+    }
+
     if (!File.Exists(yyPath))
         throw new FileNotFoundException($"{yyPath} not found.");
 
@@ -122,7 +130,11 @@ void ProcessSprite(string sprDir)
     .First();
     
     if (index == -1)
-        throw new Exception($"Could not find sprite for {yyPath}");
+    {
+        Console.WriteLine($"Skipping {spriteName} - not found in game data");
+        IncrementProgressParallel();
+        return;
+    }
 
     UndertaleSprite sprData = Data.Sprites[index];
     
