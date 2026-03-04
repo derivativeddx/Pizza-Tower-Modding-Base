@@ -160,10 +160,10 @@ PizzaTower_GM2.resource_order
 !sprites/trapscreen2/**
 
 # Modified sprites
-!sprites/spr_tv_palette
-!sprites/spr_tv_paletteN
-!sprites/spr_tv_combopalette
-!sprites/spr_tv_combopaletteN
-!sprites/spr_pepperman_portrait
-!sprites/spr_pepperman_portraitN
-!sprites/spr_pepperman_move
+!sprites/spr_tv_palette/**
+!sprites/spr_tv_paletteN/**
+!sprites/spr_tv_combopalette/**
+!sprites/spr_tv_combopaletteN/**
+!sprites/spr_pepperman_portrait/**
+!sprites/spr_pepperman_portraitN/**
+!sprites/spr_pepperman_move/**
