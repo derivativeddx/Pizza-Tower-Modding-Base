@@ -4,7 +4,7 @@ This project is aimed at creating a sustainable and easily extendable base for P
 ## Features
 - The `ispeppino` variable is now completely deprecated, replaced by the `character` variable, making adding new characters to the game much more convenient.
 - Almost all unused/cut content has been finally axed from the game, leaving the game lighter and faster to start up.
-- Updated in-game character switching is implemented using the `switch_char` command.
+- Updated in-game character switching is implemented using the `char` command.
 - Peppino's player movement behavior is now the default for any new character.
 
 ## Planned Features
