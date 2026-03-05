@@ -3,4 +3,5 @@ characters_available = [
 	"P",
 	"N"
 ];
-charselection = 0;
+selection_index = 0;
+selected_character = "P";
