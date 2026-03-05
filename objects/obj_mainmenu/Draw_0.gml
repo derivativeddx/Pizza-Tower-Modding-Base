@@ -122,17 +122,17 @@ for (i = 0; i < array_length(games); i++)
 draw_set_alpha(extrauialpha);
 if (noise_unlocked)
 {
-	var icon = spr_mainmenu_pepicon;
+	var icon = spr_player_idle;
 	if (shownoise)
 	{
-		icon = spr_mainmenu_noiseicon;
+		icon = spr_playerN_idle;
 		if (swap_unlocked)
 		{
-			icon = spr_mainmenu_noiseswapicon;
+			icon = spr_playerN_dive;
 		}
 		if (showswap)
 		{
-			icon = spr_mainmenu_swapicon;
+			icon = spr_player_fightball;
 		}
 	}
 	draw_sprite(icon, game_icon_index, status_x - 100, status_y + 195 + game_icon_y);
