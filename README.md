@@ -21,7 +21,8 @@ This project is aimed at creating a sustainable and easily extendable base for P
 4. Select the root folder of the project (the one that contains `PizzaTower_GM2.yyp`)
 5. When the script will finish extracting all sprites, delete `.gitignore` and move the folder somewhere else
 6. Done! Now you can open this project in GameMaker.
-WARNING: The save file folder in `AppData/Roaming`, by default, is linked to the project file name (`PizzaTower_GM2.yyp`). Do not rename it unless you're planning to use a different folder for your mod.
+
+**WARNING**: The save file folder in `AppData/Roaming`, by default, is linked to the project file name (`PizzaTower_GM2.yyp`). Do not rename it unless you're planning to use a different folder for your mod.
 
 ## Credits
 - **setupwitch** for creating Pizza Tower EXtracted and making PT: Optimized possible
