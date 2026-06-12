@@ -43,8 +43,14 @@ function get_char_palette_info(character)
 	}
 	
 	// Default case (not the current character)
+	var _char_palette = character_palettes[$ character];
+	if (is_undefined(_char_palette))
+	{
+		_char_palette = spr_peppalette;
+	}
+	
 	return {
-		spr_palette: character_palettes[$ character],
+		spr_palette: _char_palette,
 		paletteselect: 1,
 		patterntexture: noone
 	};
