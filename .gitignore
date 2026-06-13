@@ -1,14 +1,14 @@
 # Ignore all PNG files in sprites and subfolders
 sprites/**/*.png
 
+# WinMerge BAK files
+*.bak
+
 # Do not ignore .yy files anywhere under sprites
 !sprites/**/*.yy
 
 # datafiles
-datafiles/
-
-# resource order
-PizzaTower_GM2.resource_order
+datafiles/*
 
 # unignore all tileset sprites
 !sprites/bg_grindrail/**
@@ -158,12 +158,3 @@ PizzaTower_GM2.resource_order
 !sprites/spr_warlab/**
 !sprites/spr_tile_waroutside/**
 !sprites/trapscreen2/**
-
-# Modified sprites
-!sprites/spr_tv_palette/**
-!sprites/spr_tv_paletteN/**
-!sprites/spr_tv_combopalette/**
-!sprites/spr_tv_combopaletteN/**
-!sprites/spr_pepperman_portrait/**
-!sprites/spr_pepperman_portraitN/**
-!sprites/spr_pepperman_move/**

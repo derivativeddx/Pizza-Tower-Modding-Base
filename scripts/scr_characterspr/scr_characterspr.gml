@@ -675,7 +675,7 @@ function scr_characterspr()
 	if (character == "M")
 	{
 		spr_idle = spr_pepperman_idle;
-		spr_move = spr_pepperman_move;
+		spr_move = spr_pepperman_exitmove;
 		spr_crawl = spr_player_crawl;
 		spr_hurt = spr_player_hurt;
 		spr_jump = spr_pepperman_jump;
@@ -689,8 +689,8 @@ function scr_characterspr()
 		spr_bump = spr_player_bump;
 		spr_land = spr_player_land;
 		spr_land2 = spr_player_land2;
-		spr_lookdoor = spr_pepperman_lookdoor;
-		spr_walkfront = spr_pepperman_walkfront;
+		spr_lookdoor = spr_playerN_lookdoor;
+		spr_walkfront = spr_playerN_walkfront;
 		spr_victory = spr_player_victory;
 		spr_Ladder = spr_player_ladder;
 		spr_laddermove = spr_player_laddermove;
@@ -717,10 +717,10 @@ function scr_characterspr()
 		spr_hurt = spr_pepperman_hurtplayer;
 		spr_climbwall = spr_player_climbwall;
 		spr_mach2jump = spr_player_mach2jump;
-		spr_Timesup = spr_pepperman_timesup;
+		spr_Timesup = spr_playerN_timesup;
 		spr_deathend = spr_player_deathend;
 		spr_hurtjump = spr_player_jumphurt;
-		spr_entergate = spr_pepperman_lookdoor;
+		spr_entergate = spr_playerN_lookdoor;
 		spr_gottreasure = spr_player_gottreasure;
 		spr_hurtidle = spr_player_hurtidle;
 		spr_hurtwalk = spr_player_hurtwalk;
@@ -826,7 +826,7 @@ function scr_characterspr()
 		spr_supertaunt2 = spr_player_supertaunt2;
 		spr_supertaunt3 = spr_player_supertaunt3;
 		spr_supertaunt4 = spr_player_supertaunt4;
-		spr_taunt = spr_pepperman_taunt;
+		spr_taunt = spr_playerN_taunt;
 		spr_rideweenie = spr_player_weeniemount;
 		spr_palette = spr_peppalette;
 	}

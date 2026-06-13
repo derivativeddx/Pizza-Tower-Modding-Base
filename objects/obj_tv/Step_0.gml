@@ -90,7 +90,7 @@ switch (state)
 		{
 			with (obj_player1)
 			{
-				if (!isgustavo || character == "N")
+				if (!isgustavo || character != "P")
 				{
 					if (mach4mode == true)
 					{

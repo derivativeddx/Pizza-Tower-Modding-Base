@@ -69,10 +69,6 @@ else if (comboend)
 	comboend = false;
 	event_perform(ev_alarm, 4);
 }
-if (shoving == true && image_index >= 3 && bang == false)
-{
-	bang = true;
-}
 if (shoving == false)
 {
 	bang = false;

@@ -1,11 +1,6 @@
 scr_collide();
-switch (obj_player1.character)
+sprite_index = spr_bossfight_playerhp;
+if (obj_player1.character == "N")
 {
-	case "N":
-		sprite_index = spr_bossfight_noiseHP;
-		break;
-		
-	default:
-		sprite_index = spr_bossfight_playerhp;
-		break;
+	sprite_index = spr_bossfight_noiseHP;
 }

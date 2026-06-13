@@ -13,10 +13,7 @@
     "name": "Effects",
     "path": "folders/Objects/Effects.yy",
   },
-  "parentObjectId": {
-    "name": "obj_baddiehurtbox",
-    "path": "objects/obj_baddiehurtbox/obj_baddiehurtbox.yy",
-  },
+  "parentObjectId": null,
   "persistent": false,
   "physicsAngularDamping": 0.1,
   "physicsDensity": 0.5,

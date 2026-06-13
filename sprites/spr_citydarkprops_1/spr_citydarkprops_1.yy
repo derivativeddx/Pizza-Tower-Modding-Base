@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Unused",
-    "path": "folders/Sprites/Unused.yy",
+    "name": "Level Structure",
+    "path": "folders/Sprites/Room Structure/Level Structure.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

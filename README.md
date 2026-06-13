@@ -1,5 +1,5 @@
 # Pizza Tower Modding Base
-This project is aimed at creating a sustainable and easily extendable base for Pizza Tower mods.
+This project is aimed at creating a sustainable and easily extendable base for Pizza Tower mods. Now updated to the latest version of PT: Optimized.
 
 ## Features
 - The `ispeppino` variable is now completely deprecated, replaced by the `character` variable, making adding new characters to the game much more convenient.

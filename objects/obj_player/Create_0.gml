@@ -611,7 +611,7 @@ if (!variable_global_exists("saveroom"))
 	ds_map_set(global.font_map, "smallfont_en", global.smallfont);
 	ds_map_set(global.font_map, "tutorialfont_en", global.tutorialfont);
 	ds_map_set(global.font_map, "creditsfont_en", global.creditsfont);
-	ds_map_set(global.font_map, "captionfont_en", 0);
+	ds_map_set(global.font_map, "captionfont_en", fnt_caption);
 	font_add_enable_aa(false);
 	var key = ds_map_find_first(global.lang_map);
 	for (var i = 0; i < ds_map_size(global.lang_map); i++)
@@ -689,6 +689,7 @@ if (!variable_global_exists("saveroom"))
 	global.reset_timer[obj_pizzagoblin] = 200;
 	global.reset_timer[obj_canongoblin] = 200;
 	global.reset_timer[obj_noisegoblin] = 200;
+	global.reset_timer[obj_spitcheese] = 100;
 	global.reset_timer[obj_bazookabaddie] = 400;
 	global.reset_timer[obj_trash] = 100;
 	global.reset_timer[obj_robot] = 150;
@@ -696,7 +697,7 @@ if (!variable_global_exists("saveroom"))
 	global.reset_timer[obj_pizzard] = 100;
 	global.reset_timer[obj_pepgoblin] = 200;
 	global.reset_timer[obj_pepbat] = 200;
-	global.reset_timer[obj_swedishmonkey	] = 200;
+	global.reset_timer[obj_swedishmonkey] = 200;
 	global.reset_timer[obj_rancher] = 100;
 	global.reset_timer[obj_pickle] = 200;
 	global.reset_timer[obj_tank] = 100;

@@ -257,6 +257,8 @@ function heat_calculate(_val)
 	return _val;
 }
 
+// PTMB: Utility Functions
+
 function get_character_sprite(_sprite, _char = "")
 {
     if (_char == "")

@@ -15,13 +15,10 @@ if (!finish)
 		}
 	}
 }
+sprite_index = spr_bossfight_playerhp;
 if (obj_player1.character == "N")
 {
 	sprite_index = spr_bossfight_noiseHP;
-}
-else
-{
-	sprite_index = spr_bossfight_playerhp;
 }
 spr_palette = obj_player1.spr_palette;
 paletteselect = obj_player1.paletteselect;

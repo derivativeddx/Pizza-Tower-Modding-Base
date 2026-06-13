@@ -29,7 +29,7 @@ function secret_check_touchall()
 	{
 		for (var xx = 0; xx < array_length(touchrequirement); xx++)
 		{
-			var t = bg_chateauscrolldeco;
+			var t = 0;
 			for (var i = 0; i < ds_list_size(touchall); i++)
 			{
 				b = ds_list_find_value(touchall, i);
@@ -62,22 +62,11 @@ function secret_check_touchall()
 
 function secret_check_trigger(_trigger)
 {
-	var _found = true;//was false
-	//with (obj_secrettrigger)
-	//{
-	//	if (trigger == _trigger && active)
-	//	{
-	//		_found = true;
-	//	}
-	//}
-	if (_found)
+	trace(
 	{
-		trace(
-		{
-			found: _found
-		});
-	}
-	return _found;
+		found: true
+	});
+	return true;
 }
 
 function secret_open_portal(_trigger)

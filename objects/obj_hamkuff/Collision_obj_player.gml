@@ -1,6 +1,6 @@
 if (state != states.stun)
 {
-	if (other.character == "P")
+	if (other.character != "N")
 	{
 		if (!other.isgustavo)
 		{

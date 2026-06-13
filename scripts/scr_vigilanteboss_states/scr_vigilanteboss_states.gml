@@ -146,8 +146,11 @@ function boss_vigilante_decide_attack()
 				}
 				with (obj_player)
 				{
-					state = states.superattackstart;
-					movespeed = 0;
+					if (object_index == obj_player1)
+					{
+						state = states.superattackstart;
+						movespeed = 0;
+					}
 				}
 				with (obj_tv)
 				{
@@ -1054,34 +1057,37 @@ function boss_vigilante_superattackstart()
 	var tx2;
 	with (lastplayerid)
 	{
-		tx2 = room_width / 3;
-		x = Approach(x, tx2, movespeed);
-		hsp = 0;
-		if (movespeed < 8)
+		if (object_index == obj_player1)
 		{
-			movespeed += 0.5;
-		}
-		xscale = (x > (room_width / 2)) ? -1 : 1;
-		if (x != tx2)
-		{
-			sprite_index = grounded ? spr_move : spr_fall;
-		}
-		else
-		{
-			movespeed = 0;
-			sprite_index = grounded ? spr_idle : spr_fall;
-		}
-		if (movespeed < 3)
-		{
-			image_speed = 0.35;
-		}
-		else if (movespeed > 3 && movespeed < 6)
-		{
-			image_speed = 0.45;
-		}
-		else
-		{
-			image_speed = 0.6;
+			tx2 = room_width / 3;
+			x = Approach(x, tx2, movespeed);
+			hsp = 0;
+			if (movespeed < 8)
+			{
+				movespeed += 0.5;
+			}
+			xscale = (x > (room_width / 2)) ? -1 : 1;
+			if (x != tx2)
+			{
+				sprite_index = grounded ? spr_move : spr_fall;
+			}
+			else
+			{
+				movespeed = 0;
+				sprite_index = grounded ? spr_idle : spr_fall;
+			}
+			if (movespeed < 3)
+			{
+				image_speed = 0.35;
+			}
+			else if (movespeed > 3 && movespeed < 6)
+			{
+				image_speed = 0.45;
+			}
+			else
+			{
+				image_speed = 0.6;
+			}
 		}
 	}
 	if (x == tx && obj_player1.x == tx2)

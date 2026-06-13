@@ -35,7 +35,7 @@ with (obj_player1)
 		sprite_index = spr_mach4;
 		image_index = 0;
 	}
-	if (character == "P" && isgustavo)
+	if (character != "N" && isgustavo)
 	{
 		if (state == states.mach2 || state == states.mach3)
 		{

@@ -81,27 +81,6 @@ function scr_player_mach2()
 				sprite_index = spr_mach;
 			}
 		}
-		//if (machpunchAnim == true)
-		//{
-		//	if (punch == false)
-		//	{
-		//		sprite_index = spr_machpunch1;
-		//	}
-		//	if (punch == true)
-		//	{
-		//		sprite_index = spr_machpunch2;
-		//	}
-		//	if (floor(image_index) == 4 && sprite_index == spr_machpunch1)
-		//	{
-		//		punch = true;
-		//		machpunchAnim = false;
-		//	}
-		//	if (floor(image_index) == 4 && sprite_index == spr_machpunch2)
-		//	{
-		//		punch = false;
-		//		machpunchAnim = false;
-		//	}
-		//}
 	}
 	if (ANIMATION_END && sprite_index == spr_mach1)
 	{

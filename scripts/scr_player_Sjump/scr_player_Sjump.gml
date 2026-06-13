@@ -41,16 +41,6 @@ function scr_player_Sjump()
 		vsp = sjumpvsp;
 	}
 	sjumpvsp -= 0.1;
-
-	//if (sprite_index == spr_player_supersidejump)
-	//{
-	//	if (a < 25)
-	//	{
-	//		a++;
-	//	}
-	//	hsp = xscale * a;
-	//	vsp = 0;
-	//}
 	if (scr_solid(x, y - 1) && !place_meeting(x, y - 1, obj_destructibles))
 	{
 		pizzapepper = 0;

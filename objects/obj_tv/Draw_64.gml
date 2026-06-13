@@ -19,12 +19,22 @@ combofill_y = _cy;
 shader_set(global.Pal_Shader);
 pal_swap_set(spr_tv_combofillpalette, (!global.combodropped && global.prank_enemykilled) ? 2 : 1);
 draw_sprite(spr_tv_combobubblefill, combofill_index, combofill_x, combofill_y);
-if (obj_player1.character != "P" || global.swapmode)
+if (global.swapmode)
 {
-	if (global.swapmode)
-		pal_swap_set(spr_tv_combopaletteN, 1);
-	else
-		pal_swap_set(get_character_sprite(spr_tv_combopalette, obj_player1.character), 1);
+	pal_swap_set(spr_tv_combopalette, 1);
+}
+else
+{
+	switch (obj_player1.character)
+	{
+		case "N":
+			pal_swap_set(spr_tv_combopalette, 1);
+			break;
+				
+		default:
+			pal_swap_set(spr_tv_combopalette, 0);
+			break;
+	}
 }
 lang_draw_sprite(spr_tv_combobubble, 0, _cx, _cy);
 draw_set_font(global.combofont2);
@@ -54,28 +64,51 @@ if (room != rm_blank)
 		pal_swap_set(palinfo.spr_palette, 2);
 		draw_sprite_ext(sprite_index, image_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
 	}
-	if (obj_player1.character != "P" || global.swapmode)
+
+	if (global.swapmode)
 	{
-		if (global.swapmode)
-			pal_swap_set(spr_tv_paletteN, 1);
-		else
-			pal_swap_set(get_character_sprite(spr_tv_palette, obj_player1.character), 1);
-		var spr = spr_tv_empty;
-		if (sprite_index == spr_tv_open)
-		{
-			spr = sprite_index;
-		}
-		draw_sprite_ext(spr, image_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
+		pal_swap_set(spr_tv_palette, 1);
 	}
+	else
+	{
+		switch (obj_player1.character)
+		{
+			case "N":
+				pal_swap_set(spr_tv_palette, 1);
+				break;
+				
+			default:
+				pal_swap_set(spr_tv_palette, 0);
+				break;
+		}
+	}
+	var spr = spr_tv_empty;
+	if (sprite_index == spr_tv_open)
+	{
+		spr = sprite_index;
+	}
+	draw_sprite_ext(spr, image_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
+
 	if (state == states.whitenoise)
 	{
-		if (obj_player1.character != "P" || global.swapmode)
+		if (global.swapmode)
 		{
-			if (global.swapmode)
-				pal_swap_set(spr_tv_paletteN, 1);
-			else
-				pal_swap_set(get_character_sprite(spr_tv_palette, obj_player1.character), 1);
+			pal_swap_set(spr_tv_palette, 1);
 		}
+		else
+		{
+			switch (obj_player1.character)
+			{
+				case "N":
+					pal_swap_set(spr_tv_palette, 1);
+					break;
+				
+				default:
+					pal_swap_set(spr_tv_palette, 0);
+					break;
+			}
+		}
+		
 		draw_sprite(spr_tv_whitenoise, tv_trans, tv_x + collect_x, tv_y + collect_y + hud_posY);
 	}
 	if (sprite_index == spr_tv_exprheatN)

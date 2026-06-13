@@ -71,7 +71,6 @@ function scr_pizzagoblin_throw()
 						hsp = other.image_xscale * 5;
 						vsp = -6;
 					}
-					bombreset = 100
 				}
 				else
 				{

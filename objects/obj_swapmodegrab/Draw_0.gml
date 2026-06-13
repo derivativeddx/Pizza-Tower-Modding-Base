@@ -1,4 +1,4 @@
-if (isgustavo && character == "P")
+if (isgustavo && character != "N")
 {
 	draw_sprite(spr_lonebrick_wait, -1, xstart, ystart);
 }

@@ -29,10 +29,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_pizzascore",
-    "path": "sprites/spr_pizzascore/spr_pizzascore.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

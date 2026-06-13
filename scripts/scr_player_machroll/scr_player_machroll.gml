@@ -12,6 +12,7 @@ function scr_player_machroll()
 	mach2 = 100;
 	machslideAnim = true;
 	move = key_right + key_left;
+	
 	if (scr_solid(x + xscale, y) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + sign(hsp), y, obj_destructibles))
 	{
 		hsp = 0;

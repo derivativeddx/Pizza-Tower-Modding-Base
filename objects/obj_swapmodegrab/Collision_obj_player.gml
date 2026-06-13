@@ -11,7 +11,7 @@ with (other)
 		baddiegrabbedID.spr_palette = spr_palette;
 		baddiegrabbedID.paletteselect = paletteselect;
 		baddiegrabbedID.patterntexture = global.palettetexture;
-		if (isgustavo && character == "P")
+		if (isgustavo && character != "N")
 		{
 			baddiegrabbedID.spr_palette = spr_ratmountpalette;
 		}

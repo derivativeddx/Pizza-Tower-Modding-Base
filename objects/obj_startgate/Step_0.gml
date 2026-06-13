@@ -41,7 +41,7 @@ if (!pizza && (highscore > 0 || (boss && hats > 0)) && bbox_in_camera(view_camer
 					break;
 				default:
 					rank_index = 0;
-					sprite_index = spr_pizzascore;
+					sprite_index = spr_gatepizza_1;
 					break;
 			}
 		}

@@ -35,7 +35,7 @@ with (other)
 			}
 			vsp = 0;
 			create_particle(x, y, particletypes.jumpdust, 0);
-
+			
 			if (sprite_index != spr_dashpadmach)
 			{
 				sprite_index = spr_dashpadmach;
