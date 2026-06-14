@@ -33,7 +33,7 @@ birdcreated = false;
 boundbox = false;
 spr_dead = spr_pizzaboy;
 important = false;
-grabbedby = 0;
+
 heavy = false;
 depth = 0;
 stuntouchbuffer = 0;

@@ -35,7 +35,6 @@ if (instance_exists(baddieID) && instance_exists(other.baddieID) && baddieID.obj
 		baddieID.hitvsp = -8;
 		baddieID.hithsp = -other.baddieID.image_xscale * 15;
 		baddieID.killbyenemybuffer = 10;
-		baddieID.grabbedby = 0;
 		if (instance_exists(other.baddieID))
 		{
 			other.baddieID.killbyenemybuffer = 10;

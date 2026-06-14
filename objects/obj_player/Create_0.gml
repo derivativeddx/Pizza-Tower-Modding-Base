@@ -634,8 +634,6 @@ if (!variable_global_exists("saveroom"))
 	global.horse = false;
 	global.checkpoint_room = noone;
 	global.checkpoint_door = "A";
-	global.graffiticount = 0;
-	global.graffitimax = 20;
 	global.noisejetpack = false;
 	global.hasfarmer = array_create(3, false);
 	global.savedattackstyle = noone;

@@ -75,7 +75,7 @@ important = false;
 heavy = true;
 paletteselect = 0;
 spr_palette = palette_cheeseslime;
-grabbedby = 0;
+
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 cooldown = 40;

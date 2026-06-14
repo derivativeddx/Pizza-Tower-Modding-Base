@@ -41,6 +41,6 @@ depth = 0;
 paletteselect = 0;
 spr_palette = palette_cheeseslime;
 sprite_index = walkspr;
-grabbedby = 0;
+
 stuntouchbuffer = 0;
 scaredbuffer = 0;

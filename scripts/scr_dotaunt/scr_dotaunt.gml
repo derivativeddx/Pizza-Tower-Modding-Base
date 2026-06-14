@@ -40,6 +40,7 @@ function scr_dotaunt()
 				if (isgustavo)
 				{
 					sprite_index = spr_player_ratmountsupertaunt;
+					show_debug_message("scr_dotaunt.gml: DOING RATMOUNT SUPERTAUNT");
 				}
 			}
 			else

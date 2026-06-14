@@ -148,7 +148,6 @@ function baddiecollisionbox_update(_baddie)
 					image_speed = 0.35;
 					image_index = 0;
 					other.baddieID.state = states.pummel;
-					other.baddieID.grabbedby = (object_index == obj_player1) ? 1 : 2;
 				}
 				else if (other.baddieID.thrown == false)
 				{
@@ -158,7 +157,6 @@ function baddiecollisionbox_update(_baddie)
 					state = states.grab;
 					baddiegrabbedID = other.baddieID;
 					other.baddieID.state = states.grabbed;
-					other.baddieID.grabbedby = 1;
 				}
 				else
 				{

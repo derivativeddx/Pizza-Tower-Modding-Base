@@ -30,5 +30,5 @@ spr_dead = spr_anchodead;
 important = false;
 heavy = false;
 depth = 0;
-grabbedby = 0;
+
 stuntouchbuffer = 0;

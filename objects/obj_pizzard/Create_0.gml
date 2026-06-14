@@ -31,7 +31,7 @@ boundbox = false;
 spr_dead = spr_pizzard_dead;
 important = false;
 depth = 0;
-grabbedby = 0;
+
 paletteselect = 0;
 spr_palette = palette_pizzard;
 stuntouchbuffer = 0;

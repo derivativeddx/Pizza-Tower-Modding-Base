@@ -36,7 +36,7 @@ heavy = false;
 depth = 0;
 paletteselect = 1;
 spr_palette = palette_cheeseslime;
-grabbedby = 0;
+
 momentum = 5;
 hitboxcreate = false;
 image_speed = 0.35;

@@ -49,7 +49,6 @@ depth = 0;
 paletteselect = obj_player1.paletteselect;
 spr_palette = spr_peppalette;
 sprite_index = spr_slimemove;
-grabbedby = 0;
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 snotty = false;

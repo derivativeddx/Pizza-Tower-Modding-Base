@@ -243,7 +243,7 @@ function scr_vigilante_arenaintro()
 		}
 		else if (sprite_index == spr_vigilante_intro2 || sprite_index == spr_vigilante_intro2N)
 		{
-			if (obj_player1.character == "P")
+			if (obj_player1.character != "N")
 			{
 				with (instance_create(x, y, obj_pistolpickup))
 				{
@@ -258,7 +258,7 @@ function scr_vigilante_arenaintro()
 			spotlightID.expand = true;
 			with (obj_player)
 			{
-				if (character == "P")
+				if (character != "N")
 				{
 					sprite_index = spr_player_screamtransition;
 					image_index = 0;

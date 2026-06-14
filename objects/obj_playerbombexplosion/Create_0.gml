@@ -143,7 +143,6 @@ ds_map_set(collision_function, obj_baddie, function(_obj)
 			other.baddiegrabbedID = _obj;
 			with (_obj)
 			{
-				grabbedby = 1;
 				scr_boss_grabbed();
 			}
 		}

@@ -39,7 +39,6 @@ heavy = false;
 depth = 0;
 paletteselect = 0;
 spr_palette = palette_forknight;
-grabbedby = 0;
 stuntouchbuffer = 0;
 ragedash = 0;
 ragecooldown = 0;

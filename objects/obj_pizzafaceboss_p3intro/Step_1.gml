@@ -503,7 +503,6 @@ switch (introstate)
 				instance_destroy(spotlightID);
 				state = states.grabbed;
 				pizzahead = true;
-				grabbedby = 1;
 				camzoom = 0.5;
 				obj_screensizer.camzoom = camzoom;
 				with (obj_player1)

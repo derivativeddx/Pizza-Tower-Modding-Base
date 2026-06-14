@@ -162,7 +162,7 @@ heavy = true;
 paletteselect = 0;
 spr_palette = spr_fakepeppinopalette;
 usepalette = true;
-grabbedby = 0;
+
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 dir = 1;

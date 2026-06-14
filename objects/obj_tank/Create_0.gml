@@ -36,7 +36,6 @@ important = false;
 heavy = false;
 depth = 0;
 charging = false;
-grabbedby = 0;
 stuntouchbuffer = 0;
 content = obj_cheeseslime;
 spr_content_dead = spr_slimedead;

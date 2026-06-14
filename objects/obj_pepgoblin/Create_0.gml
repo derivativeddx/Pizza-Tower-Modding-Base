@@ -31,7 +31,7 @@ boundbox = false;
 spr_dead = spr_pepgoblin_dead;
 important = false;
 depth = 0;
-grabbedby = 0;
+
 paletteselect = 1;
 spr_palette = palette_pepgoblin;
 stuntouchbuffer = 0;

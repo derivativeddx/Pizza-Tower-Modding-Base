@@ -29,7 +29,6 @@ function scr_player_parry()
 			{
 				notification_push(notifications.enemy_parried, [id, object_index, room]);
 				obj_player1.xscale = -image_xscale;
-				grabbedby = _grabbedby;
 				var lag = 5;
 				hitLag = lag;
 				hitX = x;

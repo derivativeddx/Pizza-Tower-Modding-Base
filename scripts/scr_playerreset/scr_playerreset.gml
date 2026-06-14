@@ -170,7 +170,6 @@ function scr_playerreset(_stop_music = true)
 		global.checkpoint_room = noone;
 		global.checkpoint_door = "A";
 		global.hp = 0;
-		global.graffiticount = 0;
 		global.gerome = false;
 		global.stylelock = false;
 		global.ammorefill = 0;

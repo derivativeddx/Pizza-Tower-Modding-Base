@@ -7,11 +7,6 @@ function Instakill()
 		hx = other.baddieID.hitX;
 		hy = other.baddieID.hitY;
 	}
-	other.baddieID.grabbedby = 1;
-	if (object_index == obj_player2)
-	{
-		other.baddieID.grabbedby = 2;
-	}
 	if (state == states.firemouth)
 	{
 		repeat (8)
@@ -43,14 +38,6 @@ function Instakill()
 	}
 	other.baddieID.invtime = 25;
 	suplexmove = true;
-	if (object_index == obj_player1)
-	{
-		other.baddieID.grabbedby = 1;
-	}
-	else
-	{
-		other.baddieID.grabbedby = 2;
-	}
 	fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
 	if (other.baddieID.elite && other.baddieID.object_index != obj_pepperman && other.baddieID.object_index != obj_pizzafaceboss && other.baddieID.object_index != obj_vigilanteboss && other.baddieID.object_index != obj_noiseboss && other.baddieID.object_index != obj_fakepepboss && other.baddieID.object_index != obj_pf_fakepep && other.baddieID.object_index != obj_pizzafaceboss_p3)
 	{

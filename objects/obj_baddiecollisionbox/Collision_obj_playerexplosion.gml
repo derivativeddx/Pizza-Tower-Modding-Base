@@ -5,7 +5,6 @@ if (instance_exists(baddieID) && baddieID.invtime == 0 && baddieID.state != stat
 		other.baddiegrabbedID = baddieID;
 		with (baddieID)
 		{
-			grabbedby = 1;
 			scr_boss_grabbed();
 		}
 	}

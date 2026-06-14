@@ -42,7 +42,7 @@ important = false;
 heavy = false;
 depth = 0;
 paletteselect = 0;
-grabbedby = 0;
+
 momentum = 5;
 hitboxcreate = false;
 image_speed = 0.35;

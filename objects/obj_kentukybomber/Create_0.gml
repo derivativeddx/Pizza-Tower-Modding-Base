@@ -32,7 +32,7 @@ spr_dead = spr_kentukybomber_dead;
 important = false;
 heavy = false;
 depth = 0;
-grabbedby = 0;
+
 stuntouchbuffer = 0;
 laserbuffer = 100;
 shoot = false;

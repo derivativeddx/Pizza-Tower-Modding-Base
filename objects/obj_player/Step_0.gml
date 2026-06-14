@@ -979,7 +979,7 @@ if (grounded && vsp > 0 && state != states.noisejetpack)
 if (tauntstoredisgustavo)
 {
 	isgustavo = true;
-	if (state != states.backbreaker && state != states.parry && state != states.graffiti)
+	if (state != states.backbreaker && state != states.parry)
 	{
 		tauntstoredisgustavo = false;
 	}

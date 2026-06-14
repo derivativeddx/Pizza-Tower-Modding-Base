@@ -32,5 +32,5 @@ important = false;
 heavy = false;
 depth = 0;
 charging = false;
-grabbedby = 0;
+
 stuntouchbuffer = 0;

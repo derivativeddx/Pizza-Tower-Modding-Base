@@ -11,8 +11,8 @@ function scr_boss_grabbed()
 		instance_destroy(obj_vigilanteshot);
 		instance_destroy(obj_playerbomb, false);
 	}
-	var playerid = (grabbedby == 1) ? obj_player1.id : obj_player2.id;
-	with (playerid)
+	
+	with (obj_player1)
 	{
 		if (state != states.supergrab || baddiegrabbedID != other)
 		{
@@ -65,7 +65,7 @@ function scr_boss_grabbed()
 			}
 		}
 	}
-	image_xscale = -playerid.xscale;
+	image_xscale = -obj_player1.xscale;
 	sprite_index = grabbedspr;
 	state = states.supergrab;
 }

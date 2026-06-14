@@ -32,5 +32,5 @@ boundbox = false;
 spr_dead = spr_canongoblin_dead;
 important = false;
 depth = 0;
-grabbedby = 0;
+
 stuntouchbuffer = 0;

@@ -4,7 +4,7 @@ function get_char_palette_info(character)
 		"P": spr_peppalette,
 		"N": spr_noisepalette,
 		//"M": spr_peppermanpalette
-		// Add more characters here as needed
+		// PTMB: Add more characters here as needed
 	};
 	
 	var player_character = obj_savesystem.character;

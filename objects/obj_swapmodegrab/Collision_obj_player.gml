@@ -43,13 +43,11 @@ with (other)
 				grabbingenemy = true;
 				heavy = baddiegrabbedID.heavy;
 				baddiegrabbedID.state = states.grabbed;
-				baddiegrabbedID.grabbedby = 1;
 			}
 			else
 			{
 				grabbingenemy = true;
 				baddiegrabbedID.state = states.grabbed;
-				baddiegrabbedID.grabbedby = 1;
 				sprite_index = spr_piledriver;
 				vsp = -14;
 				state = states.superslam;

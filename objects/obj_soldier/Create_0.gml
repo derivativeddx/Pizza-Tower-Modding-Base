@@ -46,6 +46,5 @@ heavy = false;
 depth = 0;
 paletteselect = 0;
 spr_palette = palette_cheeseslime;
-grabbedby = 0;
 stuntouchbuffer = 0;
 scaredbuffer = 0;

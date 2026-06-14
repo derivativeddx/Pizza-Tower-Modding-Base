@@ -20,11 +20,6 @@ function scr_player_backbreaker()
 		instance_destroy(parry_inst);
 	}
 	landAnim = false;
-	//if (sprite_index == spr_player_machfreefall && place_meeting(x, y + 1, obj_solid))
-	//{
-	//	state = states.machslide;
-	//	sprite_index = spr_player_crouchslide;
-	//}
 	if (sprite_index == spr_taunt || sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3 || sprite_index == spr_supertaunt4 || sprite_index == spr_player_ratmounttaunt || sprite_index == spr_player_ratmountsupertaunt)
 	{
 		if (supercharged == true && (sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3 || sprite_index == spr_supertaunt4 || sprite_index == spr_player_ratmountsupertaunt) && !instance_exists(obj_tauntaftereffectspawner))

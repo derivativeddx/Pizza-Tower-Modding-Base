@@ -115,7 +115,6 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					grabbingenemy = true;
 					heavy = other.baddieID.heavy;
 					other.baddieID.state = states.grabbed;
-					other.baddieID.grabbedby = _playerindex;
 					with (other.baddieID)
 					{
 						if (object_index == obj_pepperman || object_index == obj_noiseboss || object_index == obj_vigilanteboss || object_index == obj_pizzafaceboss || object_index == obj_fakepepboss || object_index == obj_pizzafaceboss_p3)
@@ -129,7 +128,6 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					baddiegrabbedID = other.baddieID;
 					grabbingenemy = true;
 					other.baddieID.state = states.grabbed;
-					other.baddieID.grabbedby = _playerindex;
 					sprite_index = spr_piledriver;
 					vsp = -14;
 					state = states.superslam;
@@ -145,7 +143,6 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 				grabbingenemy = true;
 				var _prevstate = other.baddieID.state;
 				other.baddieID.state = states.grabbed;
-				other.baddieID.grabbedby = _playerindex;
 				heavy = other.baddieID.heavy;
 				if (global.pummeltest)
 				{
@@ -315,7 +312,6 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					heavy = other.baddieID.heavy;
 					state = states.grab;
 					other.baddieID.state = states.grabbed;
-					other.baddieID.grabbedby = _playerindex;
 				}
 			}
 		}

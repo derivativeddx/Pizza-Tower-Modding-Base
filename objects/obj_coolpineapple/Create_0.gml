@@ -52,5 +52,5 @@ heavy = false;
 depth = 0;
 paletteselect = 1;
 spr_palette = palette_forknight;
-grabbedby = 0;
+
 stuntouchbuffer = 0;

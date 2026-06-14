@@ -29,8 +29,7 @@ function scr_pizzaball_hit()
 
 function scr_pizzaball_grabbed()
 {
-	var pl = (grabbedby == 1) ? obj_player1 : obj_player2;
-	with (pl)
+	with (obj_player1)
 	{
 		sprite_index = spr_golfidle;
 		image_index = 0;
@@ -39,7 +38,7 @@ function scr_pizzaball_grabbed()
 		hsp = 0;
 		vsp = 0;
 	}
-	player = pl;
+	player = obj_player1;
 	state = states.golf;
 	create_transformation_tip(lang_get_value("golftip"), "golf");
 }

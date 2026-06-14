@@ -55,7 +55,7 @@ depth = 0;
 paletteselect = 0;
 spr_palette = spr_shrimppalette;
 sprite_index = spr_shrimp_idle;
-grabbedby = 0;
+
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 image_speed = 0.35;

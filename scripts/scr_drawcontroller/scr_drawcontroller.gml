@@ -67,8 +67,8 @@ function enemy_is_superslam(_enemy)
 	{
 		if (state == states.grabbed)
 		{
-			var g = (grabbedby == 1) ? obj_player1.id : obj_player2.id;
-			if (g.state == states.superslam || (g.state == states.chainsaw && g.tauntstoredstate == states.superslam))
+			var player_id = obj_player1.id;
+			if (player_id.state == states.superslam || (player_id.state == states.chainsaw && player_id.tauntstoredstate == states.superslam))
 			{
 				return true;
 			}
@@ -83,8 +83,8 @@ function enemy_is_swingding(_enemy)
 	{
 		if (state == states.grabbed)
 		{
-			var g = (grabbedby == 1) ? obj_player1.id : obj_player2.id;
-			if ((g.state == states.grab || (g.state == states.chainsaw && g.tauntstoredstate == states.grab)) && g.sprite_index == g.spr_swingding)
+			var player_id = obj_player1.id;
+			if ((player_id.state == states.grab || (player_id.state == states.chainsaw && player_id.tauntstoredstate == states.grab)) && player_id.sprite_index == player_id.spr_swingding)
 			{
 				return true;
 			}

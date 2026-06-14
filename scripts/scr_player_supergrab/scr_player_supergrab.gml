@@ -54,7 +54,7 @@ function scr_player_supergrab()
 	{
 		alarm[1] = 80;
 	}
-	if (character == "P")
+	if (character != "N")
 	{
 		switch (supergrabstate)
 		{

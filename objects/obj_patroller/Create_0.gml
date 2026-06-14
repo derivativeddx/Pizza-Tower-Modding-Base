@@ -43,7 +43,6 @@ mask_index = spr_player_mask;
 paletteselect = 0;
 spr_palette = palette_cheeseslime;
 image_speed = 0;
-grabbedby = 0;
 stuntouchbuffer = 0;
 scaredbuffer = 0;
 state = states.fall;

@@ -42,7 +42,6 @@ function scr_initenemy()
 	important = false;
 	heavy = false;
 	depth = 0;
-	grabbedby = 0;
 	paletteselect = 0;
 	spr_palette = palette_forknight;
 	stuntouchbuffer = 0;
@@ -129,7 +128,6 @@ function scr_initenemy()
 	depth = 0;
 	paletteselect = 0;
 	spr_palette = palette_cheeseslime;
-	grabbedby = 0;
 	stuntouchbuffer = 0;
 	scaredbuffer = 0;
 	railmovespeed = 0;

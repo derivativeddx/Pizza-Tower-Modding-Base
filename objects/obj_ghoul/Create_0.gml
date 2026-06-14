@@ -36,7 +36,6 @@ spr_dead = spr_ghoul_dead;
 important = false;
 heavy = false;
 depth = 0;
-grabbedby = 0;
 paletteselect = 1;
 spr_palette = palette_pepgoblin;
 stuntouchbuffer = 0;

@@ -35,5 +35,5 @@ spr_dead = spr_teeth_dead;
 important = false;
 heavy = false;
 depth = 0;
-grabbedby = 0;
+
 stuntouchbuffer = 0;
