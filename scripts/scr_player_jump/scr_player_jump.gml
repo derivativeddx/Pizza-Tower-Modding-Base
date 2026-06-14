@@ -386,14 +386,9 @@ function scr_player_jump()
 			if (!instance_exists(parry_inst) && flash == true)
 			{
 				parry_inst = instance_create(x, y, obj_parryhitbox);
-				var _playerid = 1;
-				if (object_index == obj_player2)
-				{
-					_playerid = 2;
-				}
 				with (parry_inst)
 				{
-					player_id = _playerid;
+					player_id = 1;
 					image_xscale = other.xscale;
 				}
 			}

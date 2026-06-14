@@ -131,13 +131,8 @@ function scr_enemy_rage()
 			}
 			if (grounded && vsp > 0)
 			{
-				var targetplayer = obj_player1;
-				if (obj_player1.spotlight == false)
-				{
-					targetplayer = obj_player2;
-				}
 				movespeed = 4;
-				image_xscale = -sign(x - targetplayer.x);
+				image_xscale = -sign(x - obj_player1.x);
 				state = states.chase;
 				sprite_index = spr_minijohn_charge;
 			}
@@ -191,23 +186,6 @@ function scr_enemy_rage()
 				state = states.walk;
 				sprite_index = spr_ancho;
 			}
-			break;
-		case obj_spitcheese:
-			//ragedash--;
-			//if (ragedash <= 0)
-			//{
-			//	with (instance_create(x, y, obj_bigspitcheesespike))
-			//	{
-			//		other.ragedash = 50;
-			//		hsp = other.image_xscale * 5;
-			//		vsp = -7;
-			//	}
-			//}
-			//if (ANIMATION_END)
-			//{
-			//	state = states.walk;
-			//	sprite_index = spr_spitcheese_idle;
-			//}
 			break;
 		case obj_tank:
 			if (sprite_index != spr_tank_chargestart)

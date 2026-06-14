@@ -1,5 +1,6 @@
 function scr_player_gotoplayer()
 {
+	//PTMB: UNUSED
 	pogochargeactive = false;
 	movespeed = 0;
 	visible = false;

@@ -272,10 +272,6 @@ function scr_boss_genericintro(_introspr, _introbuffer = 30)
 		xscale = -other.image_xscale;
 		sprite_index = spr_idle;
 	}
-	with (obj_player2)
-	{
-		visible = false;
-	}
 	if (introbuffer > 0)
 	{
 		introbuffer--;

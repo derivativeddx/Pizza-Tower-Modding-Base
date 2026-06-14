@@ -1,5 +1,4 @@
 visible = (room == rank_room || room == timesuproom) ? false : playerid.visible;
-playerid = obj_player1.spotlight ? obj_player1 : obj_player2;
 if (state != states.backbreaker)
 {
 	if (object_index != obj_pizzakinpineapple || (sprite_index != spr_monsterpineapple_pose1 && sprite_index != spr_monsterpineapple_pose2 && sprite_index != spr_monsterpineapple_pose3))

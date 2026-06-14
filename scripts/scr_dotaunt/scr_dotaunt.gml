@@ -64,14 +64,10 @@ function scr_create_parryhitbox()
 	parrytimer = taunt_to_parry_max;
 	instance_destroy(parry_inst);
 	parry_inst = instance_create(x, y, obj_parryhitbox);
-	var _playerid = 1;
-	if (object_index == obj_player2)
-	{
-		_playerid = 2;
-	}
+
 	with (parry_inst)
 	{
-		player_id = _playerid;
+		player_id = 1;
 		image_xscale = other.xscale;
 	}
 }
