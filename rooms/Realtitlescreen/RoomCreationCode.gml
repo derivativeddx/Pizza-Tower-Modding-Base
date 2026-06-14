@@ -374,7 +374,7 @@ global.mansiontreasure = false;
 global.kidspartytreasure = false;
 global.wartreasure = false;
 pal_swap_init_system(shd_pal_swapper);
-with (obj_player1)
+with (obj_player)
 {
 	state = states.normal;
 }

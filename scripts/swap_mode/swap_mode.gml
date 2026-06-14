@@ -1,6 +1,6 @@
 function swap_is_player2()
 {
-	return global.swapmode && (obj_player1.character != obj_savesystem.character);
+	return global.swapmode && (obj_player.character != obj_savesystem.character);
 }
 
 function swap_player(_hurtswap = false, _jumpscare = false)
@@ -119,10 +119,10 @@ function swap_player(_hurtswap = false, _jumpscare = false)
 		with (obj_swapmodefollow)
 		{
 			taunttimer = 0;
-			if (character == obj_player1.character)
+			if (character == obj_player.character)
 			{
-				character = (obj_player1.character == "N") ? "P" : "N";
-				if (obj_player1.character == "N" && obj_player1.noisecrusher)
+				character = (obj_player.character == "N") ? "P" : "N";
+				if (obj_player.character == "N" && obj_player.noisecrusher)
 				{
 					isgustavo = true;
 				}

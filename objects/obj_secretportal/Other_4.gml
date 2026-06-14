@@ -1,5 +1,5 @@
 var _start = false;
-with (obj_player1)
+with (obj_player)
 {
 	if (targetDoor == "S" && secretportalID == other.id)
 	{

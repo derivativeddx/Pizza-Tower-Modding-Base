@@ -44,4 +44,4 @@ if (instance_exists(obj_treasureviewer) || !do_rank)
 {
 	exit;
 }
-obj_player1.visible = false;
+obj_player.visible = false;

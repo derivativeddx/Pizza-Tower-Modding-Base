@@ -32,8 +32,8 @@ function scr_player_timesup()
 	}
 	if (room == timesuproom)
 	{
-		obj_player1.x = 480;
-		obj_player1.y = 270;
+		obj_player.x = 480;
+		obj_player.y = 270;
 	}
 	if (floor(image_index) == 9)
 	{

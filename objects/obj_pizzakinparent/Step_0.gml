@@ -26,7 +26,7 @@ if (state != states.backbreaker)
 			sprite_index = spr_toppinpineapple;
 		}
 	}
-	if (obj_player1.state == states.backbreaker)
+	if (obj_player.state == states.backbreaker)
 	{
 		instance_create(x, y, obj_tinytaunt);
 		sprite_index = spr_taunt;
@@ -41,14 +41,14 @@ else
 	vsp = 0;
 	if (sprite_index != spr_intro)
 	{
-		var s = obj_player1.sprite_index;
-		if (s == obj_player1.spr_supertaunt1 || s == obj_player1.spr_supertaunt2 || s == obj_player1.spr_supertaunt3 || s == obj_player1.spr_supertaunt4 || s == 2685)
+		var s = obj_player.sprite_index;
+		if (s == obj_player.spr_supertaunt1 || s == obj_player.spr_supertaunt2 || s == obj_player.spr_supertaunt3 || s == obj_player.spr_supertaunt4 || s == 2685)
 		{
 			sprite_index = spr_intro;
 			image_index = 0;
 		}
 	}
-	if (obj_player1.state != states.backbreaker || (sprite_index == spr_intro && ANIMATION_END))
+	if (obj_player.state != states.backbreaker || (sprite_index == spr_intro && ANIMATION_END))
 	{
 		instance_destroy(obj_tinytaunt);
 		interp = 0;

@@ -2180,7 +2180,6 @@
     {"id":{"name":"spr_tank_chargestart","path":"sprites/spr_tank_chargestart/spr_tank_chargestart.yy",},"order":2,},
     {"id":{"name":"kidsparty_floor3_2","path":"rooms/kidsparty_floor3_2/kidsparty_floor3_2.yy",},"order":14,},
     {"id":{"name":"spr_tank_charge","path":"sprites/spr_tank_charge/spr_tank_charge.yy",},"order":3,},
-    {"id":{"name":"obj_player1","path":"objects/obj_player1/obj_player1.yy",},"order":17,},
     {"id":{"name":"kidsparty_floor3_3","path":"rooms/kidsparty_floor3_3/kidsparty_floor3_3.yy",},"order":15,},
     {"id":{"name":"spr_tank_hitwall","path":"sprites/spr_tank_hitwall/spr_tank_hitwall.yy",},"order":4,},
     {"id":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},"order":3,},

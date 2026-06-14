@@ -11,7 +11,7 @@ with (other)
 		vsp = 0;
 		state = states.taxi;
 		fmod_event_one_shot("event:/sfx/misc/taximove");
-		other.playerid = obj_player1;
+		other.playerid = obj_player;
 		other.move = true;
 		other.sprite_index = spr_taximove;
 		other.hsp = 10;

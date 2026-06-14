@@ -182,9 +182,9 @@ if (state != states.chase)
 if (state == states.walk || state == states.idle)
 {
 	movespeed = 4;
-	if (obj_player1.x != x)
+	if (obj_player.x != x)
 	{
-		image_xscale = -sign(x - obj_player1.x);
+		image_xscale = -sign(x - obj_player.x);
 	}
 	state = states.chase;
 }

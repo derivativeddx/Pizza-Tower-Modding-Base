@@ -1957,7 +1957,6 @@
     {"name":"spr_tank_chargestart","order":2,"path":"sprites/spr_tank_chargestart/spr_tank_chargestart.yy",},
     {"name":"kidsparty_floor3_2","order":14,"path":"rooms/kidsparty_floor3_2/kidsparty_floor3_2.yy",},
     {"name":"spr_tank_charge","order":3,"path":"sprites/spr_tank_charge/spr_tank_charge.yy",},
-    {"name":"obj_player1","order":17,"path":"objects/obj_player1/obj_player1.yy",},
     {"name":"kidsparty_floor3_3","order":15,"path":"rooms/kidsparty_floor3_3/kidsparty_floor3_3.yy",},
     {"name":"spr_tank_hitwall","order":4,"path":"sprites/spr_tank_hitwall/spr_tank_hitwall.yy",},
     {"name":"obj_pause","order":3,"path":"objects/obj_pause/obj_pause.yy",},

@@ -1,4 +1,4 @@
-player = obj_player1;
+player = obj_player;
 if (!instance_exists(obj_pizzaball))
 {
 	targetgolf = noone;
@@ -132,7 +132,7 @@ if (instance_exists(player) && !lock && player.state != states.timesup && player
 	switch (state)
 	{
 		case states.normal:
-			if (room == boss_pizzaface && instance_exists(obj_player1) && instance_exists(obj_pizzaface_thunderdark) && obj_player1.state != states.supergrab)
+			if (room == boss_pizzaface && instance_exists(obj_player) && instance_exists(obj_pizzaface_thunderdark) && obj_player.state != states.supergrab)
 			{
 				camera_set_view_size(view_camera[0], SCREEN_WIDTH * camzoom, SCREEN_HEIGHT * camzoom);
 				camzoom = lerp(camzoom, 1, 0.08);

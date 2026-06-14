@@ -1,4 +1,4 @@
-var p = obj_player1.id;
+var p = obj_player.id;
 var xs = p.xscale;
 with (other)
 {

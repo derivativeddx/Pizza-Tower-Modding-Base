@@ -10,7 +10,7 @@ start = false;
 time = 0;
 fadein = true;
 fmod_event_one_shot("event:/sfx/misc/escaperumble");
-if (obj_player1.character == "N")
+if (obj_player.character == "N")
 {
 	sprite_index = spr_spacetravelcutsceneN;
 }

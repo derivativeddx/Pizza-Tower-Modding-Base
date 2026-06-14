@@ -2,14 +2,14 @@ function scr_enemy_chase()
 {
 	if (object_index == obj_minijohn || object_index == obj_banditochicken || object_index == obj_golfdemon)
 	{
-		if (x != obj_player1.x && !(image_xscale == -sign(x - obj_player1.x)))
+		if (x != obj_player.x && !(image_xscale == -sign(x - obj_player.x)))
 		{
 			movespeed = 4;
 			if (object_index == obj_golfdemon)
 			{
 				movespeed = 6;
 			}
-			image_xscale = -sign(x - obj_player1.x);
+			image_xscale = -sign(x - obj_player.x);
 			momentum = -image_xscale * (movespeed + 4);
 		}
 		hsp = (image_xscale * movespeed) + momentum;

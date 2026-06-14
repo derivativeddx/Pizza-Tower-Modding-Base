@@ -22,7 +22,7 @@ if (ANIMATION_END)
 if (sprite_index != spr_rankNPend && sprite_index != spr_rankNPendstart)
 {
 	//PTMB: Put your character rank sprites here!
-	switch (obj_player1.character)
+	switch (obj_player.character)
 	{
 		case "N":
 			if (global.rank == "s")

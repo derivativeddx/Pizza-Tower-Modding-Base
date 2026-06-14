@@ -2,40 +2,40 @@ function scr_player_grabbed()
 {
 	if (fightball == false)
 	{
-		xscale = -obj_player1.xscale;
+		xscale = -obj_player.xscale;
 	}
-	obj_player1.baddiegrabbedID = id;
-	if (obj_player1.state == states.mach3 && fightball == true)
+	obj_player.baddiegrabbedID = id;
+	if (obj_player.state == states.mach3 && fightball == true)
 	{
-		x = obj_player1.x;
-		y = obj_player1.y;
+		x = obj_player.x;
+		y = obj_player.y;
 	}
-	if (obj_player1.state == states.grabbing || obj_player1.state == states.grab || obj_player1.state == states.throwing || obj_player1.state == states.slam || obj_player1.state == states.tacklecharge)
+	if (obj_player.state == states.grabbing || obj_player.state == states.grab || obj_player.state == states.throwing || obj_player.state == states.slam || obj_player.state == states.tacklecharge)
 	{
-		x = obj_player1.x;
-		if (obj_player1.sprite_index != obj_player1.spr_haulingstart)
+		x = obj_player.x;
+		if (obj_player.sprite_index != obj_player.spr_haulingstart)
 		{
-			y = obj_player1.y - 40;
+			y = obj_player.y - 40;
 		}
-		else if (floor(obj_player1.image_index) == 0)
+		else if (floor(obj_player.image_index) == 0)
 		{
-			y = obj_player1.y;
+			y = obj_player.y;
 		}
-		else if (floor(obj_player1.image_index) == 1)
+		else if (floor(obj_player.image_index) == 1)
 		{
-			y = obj_player1.y - 10;
+			y = obj_player.y - 10;
 		}
-		else if (floor(obj_player1.image_index) == 2)
+		else if (floor(obj_player.image_index) == 2)
 		{
-			y = obj_player1.y - 20;
+			y = obj_player.y - 20;
 		}
-		else if (floor(obj_player1.image_index) == 3)
+		else if (floor(obj_player.image_index) == 3)
 		{
-			y = obj_player1.y - 30;
+			y = obj_player.y - 30;
 		}
-		xscale = -obj_player1.xscale;
+		xscale = -obj_player.xscale;
 	}
-	with (obj_player1)
+	with (obj_player)
 	{
 		move = key_left2 + key_right2;
 		if (key_slap && sprite_index == spr_grab)
@@ -59,29 +59,29 @@ function scr_player_grabbed()
 		if (!(state == states.grab || (state == states.mach3 && fightball == true) || (state == states.ratmount || state == states.ratmountattack || state == states.ratmountjump || state == states.ratmountspit) || state == states.finishingblow || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
 		{
 			baddiegrabbedID = obj_null;
-			other.x = obj_player1.x;
-			other.y = obj_player1.y;
+			other.x = obj_player.x;
+			other.y = obj_player.y;
 			other.state = states.hurt;
 			other.alarm[8] = 60;
 			other.alarm[7] = 120;
 			other.image_index = 0;
 		}
 	}
-	if (obj_player1.state == states.ratmount || obj_player1.state == states.ratmountjump)
+	if (obj_player.state == states.ratmount || obj_player.state == states.ratmountjump)
 	{
 		visible = false;
-		x = obj_player1.x;
-		y = obj_player1.y;
+		x = obj_player.x;
+		y = obj_player.y;
 	}
-	if (obj_player1.state == states.tacklecharge)
+	if (obj_player.state == states.tacklecharge)
 	{
-		x = obj_player1.x + (obj_player1.xscale * 20);
-		y = obj_player1.y;
+		x = obj_player.x + (obj_player.xscale * 20);
+		y = obj_player.y;
 	}
-	if (obj_player1.state == states.finishingblow && obj_player1.image_index < 5)
+	if (obj_player.state == states.finishingblow && obj_player.image_index < 5)
 	{
-		x = obj_player1.x + (obj_player1.xscale * 60);
-		y = obj_player1.y + 14;
+		x = obj_player.x + (obj_player.xscale * 60);
+		y = obj_player.y + 14;
 	}
 	if (place_meeting(x, y, obj_swordhitbox))
 	{
@@ -97,14 +97,14 @@ function scr_player_grabbed()
 			shake_mag_acc = 3 / room_speed;
 		}
 		state = states.hurt;
-		if (scr_solid(x, y) || collision_line(x, y, obj_player1.x, obj_player1.y, obj_solid, false, true) != noone)
+		if (scr_solid(x, y) || collision_line(x, y, obj_player.x, obj_player.y, obj_solid, false, true) != noone)
 		{
-			x = obj_player1.x;
-			y = obj_player1.y;
+			x = obj_player.x;
+			y = obj_player.y;
 		}
 		other.alarm[8] = 60;
 		other.alarm[7] = 120;
-		with (obj_player1)
+		with (obj_player)
 		{
 			move = key_right + key_left;
 			if (sprite_index == spr_uppercutfinishingblow)
@@ -119,105 +119,105 @@ function scr_player_grabbed()
 			}
 		}
 	}
-	if (obj_player1.state == states.superslam && obj_player1.sprite_index == obj_player1.spr_piledriver)
+	if (obj_player.state == states.superslam && obj_player.sprite_index == obj_player.spr_piledriver)
 	{
 		switch (character)
 		{
 			case "N":
-				x = obj_player1.x;
-				y = obj_player1.y - 40;
+				x = obj_player.x;
+				y = obj_player.y - 40;
 				break;
 				
 			default:
-				if (floor(obj_player1.image_index) == 0)
+				if (floor(obj_player.image_index) == 0)
 				{
-					x = obj_player1.x + (obj_player1.xscale * 10);
-					y = obj_player1.y;
+					x = obj_player.x + (obj_player.xscale * 10);
+					y = obj_player.y;
 				}
-				if (floor(obj_player1.image_index) == 1)
+				if (floor(obj_player.image_index) == 1)
 				{
-					x = obj_player1.x + (obj_player1.xscale * 5);
-					y = obj_player1.y;
+					x = obj_player.x + (obj_player.xscale * 5);
+					y = obj_player.y;
 				}
-				if (floor(obj_player1.image_index) == 2)
+				if (floor(obj_player.image_index) == 2)
 				{
-					x = obj_player1.x;
-					y = obj_player1.y;
+					x = obj_player.x;
+					y = obj_player.y;
 				}
-				if (floor(obj_player1.image_index) == 3)
+				if (floor(obj_player.image_index) == 3)
 				{
-					x = obj_player1.x + (obj_player1.xscale * -5);
-					y = obj_player1.y;
+					x = obj_player.x + (obj_player.xscale * -5);
+					y = obj_player.y;
 				}
-				if (floor(obj_player1.image_index) == 4)
+				if (floor(obj_player.image_index) == 4)
 				{
-					x = obj_player1.x + (obj_player1.xscale * -10);
-					y = obj_player1.y;
+					x = obj_player.x + (obj_player.xscale * -10);
+					y = obj_player.y;
 				}
-				if (floor(obj_player1.image_index) == 5)
+				if (floor(obj_player.image_index) == 5)
 				{
-					x = obj_player1.x + (obj_player1.xscale * -5);
-					y = obj_player1.y;
+					x = obj_player.x + (obj_player.xscale * -5);
+					y = obj_player.y;
 				}
-				if (floor(obj_player1.image_index) == 6)
+				if (floor(obj_player.image_index) == 6)
 				{
-					x = obj_player1.x;
-					y = obj_player1.y;
+					x = obj_player.x;
+					y = obj_player.y;
 				}
-				if (floor(obj_player1.image_index) == 7)
+				if (floor(obj_player.image_index) == 7)
 				{
-					x = obj_player1.x + (obj_player1.xscale * 5);
-					y = obj_player1.y;
+					x = obj_player.x + (obj_player.xscale * 5);
+					y = obj_player.y;
 				}
 				break;
 		}
 	}
-	if (obj_player1.state == states.grab && obj_player1.sprite_index == obj_player1.spr_swingding)
+	if (obj_player.state == states.grab && obj_player.sprite_index == obj_player.spr_swingding)
 	{
-		if (floor(obj_player1.image_index) == 0)
+		if (floor(obj_player.image_index) == 0)
 		{
-			x = obj_player1.x + (obj_player1.xscale * 25);
-			y = obj_player1.y;
+			x = obj_player.x + (obj_player.xscale * 25);
+			y = obj_player.y;
 		}
-		if (floor(obj_player1.image_index) == 1)
+		if (floor(obj_player.image_index) == 1)
 		{
-			x = obj_player1.x;
-			y = obj_player1.y;
+			x = obj_player.x;
+			y = obj_player.y;
 		}
-		if (floor(obj_player1.image_index) == 2)
+		if (floor(obj_player.image_index) == 2)
 		{
-			x = obj_player1.x + (obj_player1.xscale * -25);
-			y = obj_player1.y;
+			x = obj_player.x + (obj_player.xscale * -25);
+			y = obj_player.y;
 		}
-		if (floor(obj_player1.image_index) == 3)
+		if (floor(obj_player.image_index) == 3)
 		{
-			x = obj_player1.x + (obj_player1.xscale * -50);
-			y = obj_player1.y;
+			x = obj_player.x + (obj_player.xscale * -50);
+			y = obj_player.y;
 		}
-		if (floor(obj_player1.image_index) == 4)
+		if (floor(obj_player.image_index) == 4)
 		{
-			x = obj_player1.x + (obj_player1.xscale * -25);
-			y = obj_player1.y;
+			x = obj_player.x + (obj_player.xscale * -25);
+			y = obj_player.y;
 		}
-		if (floor(obj_player1.image_index) == 5)
+		if (floor(obj_player.image_index) == 5)
 		{
-			x = obj_player1.x;
-			y = obj_player1.y;
+			x = obj_player.x;
+			y = obj_player.y;
 		}
-		if (floor(obj_player1.image_index) == 6)
+		if (floor(obj_player.image_index) == 6)
 		{
-			x = obj_player1.x + (obj_player1.xscale * 25);
-			y = obj_player1.y;
+			x = obj_player.x + (obj_player.xscale * 25);
+			y = obj_player.y;
 		}
-		if (floor(obj_player1.image_index) == 7)
+		if (floor(obj_player.image_index) == 7)
 		{
-			x = obj_player1.x + (obj_player1.xscale * 50);
-			y = obj_player1.y;
+			x = obj_player.x + (obj_player.xscale * 50);
+			y = obj_player.y;
 		}
 	}
-	if (obj_player1.sprite_index == obj_player1.spr_piledriverland && floor(obj_player1.image_index) == (obj_player1.image_number - 1))
+	if (obj_player.sprite_index == obj_player.spr_piledriverland && floor(obj_player.image_index) == (obj_player.image_number - 1))
 	{
-		with (obj_player1)
+		with (obj_player)
 		{
 			state = states.jump;
 			vsp = -8;
@@ -227,22 +227,22 @@ function scr_player_grabbed()
 		instance_create(x, y, obj_slapstar);
 		instance_create(x, y, obj_baddiegibs);
 		flash = true;
-		x = obj_player1.x;
-		y = obj_player1.y;
+		x = obj_player.x;
+		y = obj_player.y;
 		state = states.hurt;
 		hithsp = -image_xscale * 10;
 		hitvsp = -10;
 		other.alarm[8] = 60;
 		other.alarm[7] = 120;
 	}
-	if (obj_player1.state != states.mach3)
+	if (obj_player.state != states.mach3)
 	{
 		sprite_index = spr_hurt;
 	}
 	else
 	{
 		sprite_index = spr_fightball;
-		image_index = obj_player1.image_index;
+		image_index = obj_player.image_index;
 	}
 	image_speed = 0.4;
 }

@@ -1,4 +1,4 @@
-var myplayer = obj_player1.id;
+var myplayer = obj_player.id;
 if (myplayer.state != states.hurt)
 {
 	with (myplayer)

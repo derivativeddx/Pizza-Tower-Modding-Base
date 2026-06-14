@@ -67,7 +67,7 @@ function enemy_is_superslam(_enemy)
 	{
 		if (state == states.grabbed)
 		{
-			var player_id = obj_player1.id;
+			var player_id = obj_player.id;
 			if (player_id.state == states.superslam || (player_id.state == states.chainsaw && player_id.tauntstoredstate == states.superslam))
 			{
 				return true;
@@ -83,7 +83,7 @@ function enemy_is_swingding(_enemy)
 	{
 		if (state == states.grabbed)
 		{
-			var player_id = obj_player1.id;
+			var player_id = obj_player.id;
 			if ((player_id.state == states.grab || (player_id.state == states.chainsaw && player_id.tauntstoredstate == states.grab)) && player_id.sprite_index == player_id.spr_swingding)
 			{
 				return true;
@@ -142,7 +142,7 @@ function draw_enemy(_draw_healthbar, _pal, _color = c_white)
 			pal_swap_set(spr_peppalette, 0);
 			if (!global.swapmode)
 			{
-				if ((object_index == obj_fakepepboss || object_index == obj_gustavograbbable) && obj_player1.character != "N")
+				if ((object_index == obj_fakepepboss || object_index == obj_gustavograbbable) && obj_player.character != "N")
 				{
 					pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale * xscale, image_yscale * yscale, global.palettetexture);
 				}
@@ -265,7 +265,7 @@ function draw_player()
 		ps = info.paletteselect;
 		spr = info.spr_palette;
 	}
-	if (object_index == obj_player1)
+	if (object_index == obj_player)
 	{
 		pattern_set(global.Base_Pattern_Color, _sprite_index, _image_index, xscale * scale_xs, yscale * scale_ys, pattern);
 	}

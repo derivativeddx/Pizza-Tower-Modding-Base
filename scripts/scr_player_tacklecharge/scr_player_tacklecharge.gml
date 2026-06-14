@@ -42,7 +42,7 @@ function scr_player_tacklecharge()
 	{
 		if (baddiegrabbedID != obj_null)
 		{
-			if (baddiegrabbedID.object_index == obj_player1)
+			if (baddiegrabbedID.object_index == obj_player)
 			{
 				with (baddiegrabbedID)
 				{

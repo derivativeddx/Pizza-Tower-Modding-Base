@@ -132,7 +132,7 @@ function scr_enemy_rage()
 			if (grounded && vsp > 0)
 			{
 				movespeed = 4;
-				image_xscale = -sign(x - obj_player1.x);
+				image_xscale = -sign(x - obj_player.x);
 				state = states.chase;
 				sprite_index = spr_minijohn_charge;
 			}

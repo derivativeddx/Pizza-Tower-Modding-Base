@@ -1,5 +1,5 @@
 var accel = 2;
-with (obj_player1)
+with (obj_player)
 {
 	if (room == rank_room)
 	{

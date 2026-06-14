@@ -1,7 +1,7 @@
 if (!showswap)
 {
 	global.swapmode = false;
-	with (obj_player1)
+	with (obj_player)
 	{
 		character = other.shownoise ? "N" : "P";
 		scr_characterspr();

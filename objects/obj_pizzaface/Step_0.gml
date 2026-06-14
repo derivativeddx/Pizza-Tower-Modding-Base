@@ -3,7 +3,7 @@ if (!fmod_event_instance_is_playing(snd))
 {
 	fmod_event_instance_play(snd);
 }
-if (!instance_exists(obj_player1))
+if (!instance_exists(obj_player))
 {
 	exit;
 }
@@ -19,11 +19,11 @@ if (!treasure)
 {
 	if (image_alpha >= 1)
 	{
-		if (!instance_exists(obj_fadeout) && !obj_player1.cutscene)
+		if (!instance_exists(obj_fadeout) && !obj_player.cutscene)
 		{
 			if (_move)
 			{
-				var dir = point_direction(x, y, obj_player1.x, obj_player1.y);
+				var dir = point_direction(x, y, obj_player.x, obj_player.y);
 				x += lengthdir_x(maxspeed, dir);
 				y += lengthdir_y(maxspeed, dir);
 			}
@@ -43,10 +43,10 @@ if (!_move)
 {
 	image_alpha = Approach(image_alpha, 0, 0.1);
 }
-if (_move && place_meeting(x, y, obj_player1) && !obj_player1.cutscene && obj_player1.state != states.actor && !instance_exists(obj_fadeout) && !instance_exists(obj_endlevelfade) && image_alpha >= 1)
+if (_move && place_meeting(x, y, obj_player) && !obj_player.cutscene && obj_player.state != states.actor && !instance_exists(obj_fadeout) && !instance_exists(obj_endlevelfade) && image_alpha >= 1)
 {
 	fmod_event_instance_stop(snd, true);
-	with (obj_player1)
+	with (obj_player)
 	{
 		instance_destroy(obj_fadeout);
 		targetDoor = "A";

@@ -25,7 +25,7 @@ if (global.swapmode)
 }
 else
 {
-	switch (obj_player1.character)
+	switch (obj_player.character)
 	{
 		case "N":
 			pal_swap_set(spr_tv_combopalette, 1);
@@ -51,14 +51,14 @@ for (var i = num; i > 0; i--)
 	_tx -= 22;
 	_ty -= 8;
 }
-var palinfo = get_char_palette_info(obj_player1.character);
+var palinfo = get_char_palette_info(obj_player.character);
 if (room != rm_blank)
 {
 	draw_sprite_ext(spr_tv_bgfinal, tv_bg_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
 	pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, patterntexture);
 	pal_swap_set(palinfo.spr_palette, paletteselect);
 	draw_sprite_ext(sprite_index, image_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
-	var _red = global.noisejetpack && (obj_player1.character != "N" || obj_player1.noisepizzapepper);
+	var _red = global.noisejetpack && (obj_player.character != "N" || obj_player.noisepizzapepper);
 	if (_red)
 	{
 		pal_swap_set(palinfo.spr_palette, 2);
@@ -71,7 +71,7 @@ if (room != rm_blank)
 	}
 	else
 	{
-		switch (obj_player1.character)
+		switch (obj_player.character)
 		{
 			case "N":
 				pal_swap_set(spr_tv_palette, 1);
@@ -97,7 +97,7 @@ if (room != rm_blank)
 		}
 		else
 		{
-			switch (obj_player1.character)
+			switch (obj_player.character)
 			{
 				case "N":
 					pal_swap_set(spr_tv_palette, 1);

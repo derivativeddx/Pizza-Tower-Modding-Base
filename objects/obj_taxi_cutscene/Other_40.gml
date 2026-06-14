@@ -1,6 +1,6 @@
 if (sprite_index == spr_taximove && pickedup)
 {
-	with (obj_player1)
+	with (obj_player)
 	{
 		lastroom = room;
 		obj_camera.chargecamera = 0;

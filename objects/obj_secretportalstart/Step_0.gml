@@ -1,4 +1,4 @@
-if (room == tower_soundtestlevel && (obj_player1.state == states.backtohub || obj_player1.state == states.comingoutdoor || obj_player1.targetDoor == "A"))
+if (room == tower_soundtestlevel && (obj_player.state == states.backtohub || obj_player.state == states.comingoutdoor || obj_player.targetDoor == "A"))
 {
 	instance_destroy();
 	exit;
@@ -12,7 +12,7 @@ switch (sprite_index)
 		{
 			visible = false;
 		}
-		with (obj_player1)
+		with (obj_player)
 		{
 			x = other.x;
 			y = other.y;
@@ -30,7 +30,7 @@ switch (sprite_index)
 		{
 			fmod_event_one_shot_3d("event:/sfx/misc/secretexit", x, y);
 			sprite_index = spr_secretportal_spawnidle;
-			with (obj_player1)
+			with (obj_player)
 			{
 				if (!isgustavo && tauntstoredstate != states.knightpep && tauntstoredstate != states.knightpepslopes && tauntstoredstate != states.knightpepbump && tauntstoredstate != states.firemouth)
 				{
@@ -64,7 +64,7 @@ switch (sprite_index)
 			{
 				visible = false;
 			}
-			with (obj_player1)
+			with (obj_player)
 			{
 				x = other.x;
 				y = other.y - 10;

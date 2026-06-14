@@ -1186,7 +1186,7 @@ if (state == states.gameover && y > (room_height * 2) && !instance_exists(obj_ba
 {
 	targetDoor = "HUB";
 	scr_playerreset();
-	with (obj_player1)
+	with (obj_player)
 	{
 		image_index = 0;
 		image_blend = c_white;
@@ -1267,7 +1267,7 @@ if (global.combo >= 25 && !instance_exists(angryeffectid) && sprite_index != spr
 		other.angryeffectid = id;
 	}
 }
-if (object_index == obj_player1)
+if (object_index == obj_player)
 {
 	if (global.combotimepause > 0)
 	{

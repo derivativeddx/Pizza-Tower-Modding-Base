@@ -1,2 +1,2 @@
-obj_player1.state = states.normal;
+obj_player.state = states.normal;
 instance_destroy();

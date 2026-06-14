@@ -27,7 +27,7 @@ if (room == hub_loadingscreen && state != 2)
 				targetDoor = "A";
 				state = states.victory;
 				var _character = other.character
-				with (obj_player1)
+				with (obj_player)
 				{
 					character = _character;
 					scr_characterspr();

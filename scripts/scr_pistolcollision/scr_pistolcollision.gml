@@ -100,7 +100,7 @@ function scr_pistolhit(_inst, _dmg)
 						}
 						else
 						{
-							obj_player1.baddiegrabbedID = id;
+							obj_player.baddiegrabbedID = id;
 							scr_boss_grabbed();
 						}
 					}

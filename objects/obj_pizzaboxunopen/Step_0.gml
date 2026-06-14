@@ -133,7 +133,7 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		{
 			number = "1000";
 		}
-		if (place_meeting(x, y, obj_player1))
+		if (place_meeting(x, y, obj_player))
 		{
 			global.collect += 1000;
 		}

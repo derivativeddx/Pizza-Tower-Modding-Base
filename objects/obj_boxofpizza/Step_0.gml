@@ -2,7 +2,7 @@ if (global.horse)
 {
 	exit;
 }
-with (obj_player1)
+with (obj_player)
 {
 	if (other.image_yscale == 1)
 	{

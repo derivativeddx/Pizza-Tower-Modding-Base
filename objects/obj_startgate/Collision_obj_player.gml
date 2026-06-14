@@ -22,7 +22,7 @@ with (other)
 	}
 }
 
-if (floor(obj_player1.image_index) == (obj_player1.image_number - 1) && obj_player1.state == states.victory)
+if (floor(obj_player.image_index) == (obj_player.image_number - 1) && obj_player.state == states.victory)
 {
 	with (obj_player)
 	{

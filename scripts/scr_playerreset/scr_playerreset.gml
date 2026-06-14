@@ -270,9 +270,9 @@ function scr_playerreset(_stop_music = true)
 		audio_stop_all();
 		global.seconds = 59;
 		global.minutes = 1;
-		obj_player1.prevstate = states.comingoutdoor;
-		obj_player1.state = states.comingoutdoor;
-		obj_player1.visible = true;
+		obj_player.prevstate = states.comingoutdoor;
+		obj_player.state = states.comingoutdoor;
+		obj_player.visible = true;
 		ds_list_clear(global.saveroom);
 		ds_list_clear(global.escaperoom);
 		ds_list_clear(global.baddieroom);

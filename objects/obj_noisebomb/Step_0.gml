@@ -9,8 +9,8 @@ if (global.miniboss == false)
 if (sprite_index == spr_noisebomb_intro && ANIMATION_END)
 {
 	sprite_index = spr_noisebomb_idle;
-	x = obj_player1.x;
-	y = obj_player1.y;
+	x = obj_player.x;
+	y = obj_player.y;
 }
 if (global.miniboss == true && sprite_index != spr_noisebomb_intro)
 {
@@ -51,8 +51,8 @@ if (global.miniboss == true && sprite_index != spr_noisebomb_intro)
 	}
 	else
 	{
-		ds_queue_enqueue(followQueue, obj_player1.x);
-		ds_queue_enqueue(followQueue, obj_player1.y);
+		ds_queue_enqueue(followQueue, obj_player.x);
+		ds_queue_enqueue(followQueue, obj_player.y);
 	}
 	LAG_STEPS = 10;
 	if (ds_queue_size(followQueue) > (LAG_STEPS * 2))
@@ -60,5 +60,5 @@ if (global.miniboss == true && sprite_index != spr_noisebomb_intro)
 		x = ds_queue_dequeue(followQueue) - (image_xscale * 4);
 		y = ds_queue_dequeue(followQueue) + 2;
 	}
-	image_xscale = obj_player1.xscale;
+	image_xscale = obj_player.xscale;
 }
