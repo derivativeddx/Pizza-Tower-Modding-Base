@@ -2,7 +2,7 @@ function scr_enemy_grabbed()
 {
 	if (!pepperman_grab)
 	{
-		var _obj_player = asset_get_index("obj_player1"));
+		var _obj_player = asset_get_index("obj_player1");
 		image_xscale = -_obj_player.xscale;
 		stunned = 200;
 		_obj_player.baddiegrabbedID = id;
