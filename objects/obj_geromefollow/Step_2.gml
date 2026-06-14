@@ -13,9 +13,9 @@ if (state != states.backbreaker)
 		{
 			image_xscale = -sign(xprevious - x);
 		}
-		else if (playerid.hsp == 0)
+		else if (obj_player1.hsp == 0)
 		{
-			image_xscale = playerid.xscale;
+			image_xscale = obj_player1.xscale;
 		}
 		if (obj_player1.state == states.backbreaker)
 		{

@@ -164,7 +164,6 @@ function scr_do_rank(_showtoppins = true, _isboss = false)
 	obj_endlevelfade.alarm[0] = 235;
 	image_index = 0;
 	global.panic = false;
-	global.snickchallenge = false;
 	global.leveltorestart = noone;
 	gamesave_async_save();
 }

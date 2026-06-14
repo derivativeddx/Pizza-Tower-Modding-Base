@@ -1,22 +1,6 @@
-if (player == 1)
-{
-	if (got && obj_player1.state != states.gottreasure)
-	{
-		instance_destroy();
-	}
-}
-if (player == 2)
-{
-	if (got && obj_player2.state != states.gottreasure)
-	{
-		instance_destroy();
-	}
-}
-if (player == 0)
-{
-	y = Wave(ystart - 5, ystart + 5, 2, 2);
-}
-if (player == 0 && place_meeting(x, y, obj_player))
+y = Wave(ystart - 5, ystart + 5, 2, 2);
+
+if (place_meeting(x, y, obj_player))
 {
 	var num = instance_place_list(x, y, obj_player, global.instancelist, false);
 	for (var i = 0; i < num; i++)
@@ -49,7 +33,6 @@ if (player == 0 && place_meeting(x, y, obj_player))
 				obj_tv.showtext = true;
 				obj_tv.message = "YOU GOT A TOWER SECRET TREASURE!!!";
 				obj_tv.alarm[0] = 200;
-				other.player = (object_index == obj_player1) ? 1 : 2;
 				ds_list_clear(global.instancelist);
 				break;
 			}

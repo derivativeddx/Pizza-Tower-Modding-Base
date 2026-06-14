@@ -73,7 +73,7 @@ else if (fadein == true)
 {
 	fadealpha -= 0.1;
 }
-if (instance_exists(obj_player))
+if (instance_exists(obj_player1))
 {
 	with (obj_player1)
 	{
@@ -86,22 +86,6 @@ if (instance_exists(obj_player))
 		{
 			state = states.crouchjump;
 			uncrouch = 20;
-		}
-	}
-	if (instance_exists(obj_player2))
-	{
-		with (obj_player2)
-		{
-			if (other.fadein == true && (obj_player2.state == states.door || obj_player2.state == states.victory) && (place_meeting(x, y, obj_door) || place_meeting(x, y, obj_startgate)))
-			{
-				state = states.comingoutdoor;
-				uncrouch = 20;
-				image_index = 0;
-			}
-			if (other.fadein == true && obj_player2.state == states.door && (obj_player2.sprite_index == spr_downpizzabox || obj_player2.sprite_index == spr_uppizzabox))
-			{
-				state = states.crouchjump;
-			}
 		}
 	}
 }

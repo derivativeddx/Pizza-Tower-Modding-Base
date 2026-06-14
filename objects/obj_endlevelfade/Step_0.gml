@@ -1,15 +1,11 @@
 var accel = 2;
-with (obj_player)
+with (obj_player1)
 {
 	if (room == rank_room)
 	{
 		var cx = camera_get_view_x(view_camera[0]);
 		var cy = camera_get_view_y(view_camera[0]);
 		var tx = cx + (SCREEN_WIDTH / 2);
-		if (object_index == obj_player2)
-		{
-			tx += 100;
-		}
 		var ty = cy + (SCREEN_HEIGHT / 2);
 		var dir = point_direction(x, y, tx, ty);
 		var lx = lengthdir_x(accel, dir);

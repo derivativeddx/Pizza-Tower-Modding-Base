@@ -1,5 +1,5 @@
 
-if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == false)
+if (ds_list_find_index(global.saveroom, id) == -1)
 {
 	scr_sleep(5);
 	with (instance_create(x + 32, y + 32, obj_parryeffect))

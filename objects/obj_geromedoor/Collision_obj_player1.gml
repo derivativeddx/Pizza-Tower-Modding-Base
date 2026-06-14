@@ -1,7 +1,3 @@
-if (!unlocked)
-{
-	exit;
-}
 if (other.state == states.actor)
 {
 	exit;
@@ -14,15 +10,16 @@ if (!place_meeting(x, y, obj_doorblocked))
 {
 	with (other)
 	{
-		if (key_up && !instance_exists(obj_jumpscare) && other.sprite_index == spr_elevatoropen && grounded && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.pogo || state == states.mach3 || state == states.Sjumpprep) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor)
+		if (key_up && !instance_exists(obj_jumpscare) && other.image_index == 1 && grounded && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.pogo || state == states.mach3 || state == states.Sjumpprep) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor)
 		{
-			lastroom = room;
+			
 			fmod_event_one_shot("event:/sfx/misc/door");
 			obj_camera.chargecamera = 0;
 			ds_list_add(global.saveroom, id);
+			lastroom = room;
 			sprite_index = spr_lookdoor;
 			targetDoor = other.targetDoor;
-			targetRoom = other.targetRoom2;
+			targetRoom = other.targetRoom;
 			image_index = 0;
 			state = states.door;
 			mach2 = 0;

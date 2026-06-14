@@ -156,20 +156,11 @@ switch (level)
 	case "ufo":
 		msg = "SPACE PINBALL";
 		break;
-	case "strongcold":
-		msg = "STRONGCOLD";
-		break;
 	case "forest":
 		msg = "GNOME FOREST";
 		break;
 	case "beach":
 		msg = "PINEAPPLE BEACH";
-		break;
-	case "dragonlair":
-		msg = "DRAGON LAIR";
-		break;
-	case "snickchallenge":
-		msg = "SNICK CHALLENGE";
 		break;
 }
 scr_hub_bg_reinit(x, y);

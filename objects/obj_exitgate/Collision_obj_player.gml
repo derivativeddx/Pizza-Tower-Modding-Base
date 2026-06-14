@@ -29,7 +29,7 @@ if (drop && dropstate != states.idle)
 }
 with (obj_player)
 {
-	if (grounded && (x > (other.x - 160) && x < (other.x + 160)) && key_up && (state == states.normal || state == states.Sjumpprep || state == states.mach1 || state == states.mach2 || state == states.mach3) && (global.panic == true || global.snickchallenge == true || room == war_13 || other.random_secret))
+	if (grounded && (x > (other.x - 160) && x < (other.x + 160)) && key_up && (state == states.normal || state == states.Sjumpprep || state == states.mach1 || state == states.mach2 || state == states.mach3) && (global.panic == true || room == war_13 || other.random_secret))
 	{
 		global.noisejetpack = false;
 		global.startgate = false;

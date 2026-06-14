@@ -1635,7 +1635,7 @@ else
 {
 	cutscene = false;
 }
-if ((state == states.normal || state == states.ratmount) && obj_player1.spotlight == true && !instance_exists(obj_uparrow) && (collision_flags & collisionflags.on_floor) > 0)
+if ((state == states.normal || state == states.ratmount) && !instance_exists(obj_uparrow) && (collision_flags & collisionflags.on_floor) > 0)
 {
 	if (place_meeting(x, y, obj_uparrowhitbox))
 	{

@@ -31,25 +31,11 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		{
 			number = "1000";
 		}
-		if (place_meeting(x, y, obj_player1))
-		{
-			global.collect += 1000;
-		}
-		else
-		{
-			global.collectN += 1000;
-		}
+		global.collect += 1000;
 		instance_create(x, y, obj_taunteffect);
 		with (instance_create(x, y - 25, content))
 		{
-			if (roomname == "strongcold")
-			{
-				sprite_index = spr_toppinshroom_intro;
-			}
-			else
-			{
-				sprite_index = spr_toppinshroom_intro;
-			}
+			sprite_index = spr_toppinshroom_intro;
 		}
 		if (global.toppintotal < 5)
 		{
@@ -70,24 +56,10 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		{
 			number = "1000";
 		}
-		if (place_meeting(x, y, obj_player1))
-		{
-			global.collect += 1000;
-		}
-		else
-		{
-			global.collectN += 1000;
-		}
+		global.collect += 1000;
 		with (instance_create(x, y - 25, content))
 		{
-			if (roomname == "strongcold")
-			{
-				sprite_index = spr_toppincheese_intro;
-			}
-			else
-			{
-				sprite_index = spr_toppincheese_intro;
-			}
+			sprite_index = spr_toppincheese_intro;
 		}
 		instance_create(x, y, obj_taunteffect);
 		if (global.toppintotal < 5)
@@ -109,24 +81,11 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		{
 			number = "1000";
 		}
-		if (place_meeting(x, y, obj_player1))
-		{
-			global.collect += 1000;
-		}
-		else
-		{
-			global.collectN += 1000;
-		}
+		global.collect += 1000;
+		
 		with (instance_create(x, y - 25, content))
 		{
-			if (roomname == "strongcold")
-			{
-				sprite_index = spr_toppintomato_intro;
-			}
-			else
-			{
-				sprite_index = spr_toppintomato_intro;
-			}
+			sprite_index = spr_toppintomato_intro;
 		}
 		instance_create(x, y, obj_taunteffect);
 		if (global.toppintotal < 5)
@@ -148,24 +107,11 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		{
 			number = "1000";
 		}
-		if (place_meeting(x, y, obj_player1))
-		{
-			global.collect += 1000;
-		}
-		else
-		{
-			global.collectN += 1000;
-		}
+		global.collect += 1000;
+	
 		with (instance_create(x, y - 25, content))
 		{
-			if (roomname == "strongcold")
-			{
-				sprite_index = spr_toppinsausage_intro;
-			}
-			else
-			{
-				sprite_index = spr_toppinsausage_intro;
-			}
+			sprite_index = spr_toppinsausage_intro;
 		}
 		instance_create(x, y, obj_taunteffect);
 		if (global.toppintotal < 5)
@@ -191,20 +137,9 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
 		{
 			global.collect += 1000;
 		}
-		else
-		{
-			global.collectN += 1000;
-		}
 		with (instance_create(x, y - 25, content))
 		{
-			if (roomname == "strongcold")
-			{
-				sprite_index = spr_toppinpineapple_intro;
-			}
-			else
-			{
-				sprite_index = spr_toppinpineapple_intro;
-			}
+			sprite_index = spr_toppinpineapple_intro;
 		}
 		instance_create(x, y, obj_taunteffect);
 		global.heattime = 60;

@@ -2,16 +2,8 @@ if (locked)
 {
 	exit;
 }
-var _actor = false;
 var door = id;
-with (obj_player)
-{
-	if (state == states.actor)
-	{
-		_actor = true;
-	}
-}
-if (_actor)
+if (other.state == states.actor)
 {
 	exit;
 }
@@ -36,47 +28,38 @@ if (!place_meeting(x, y, obj_doorblocked))
 					notification_push(notifications.pumpkindoor_entered, [room]);
 					global.levelreset = true;
 				}
-				obj_player1.backtohubroom = room;
-				obj_player1.backtohubstartx = obj_player1.x;
-				obj_player1.backtohubstarty = obj_player1.y;
+				backtohubroom = room;
+				backtohubstartx = x;
+				backtohubstarty = y;
 			}
 			if (room == trickytreat_1)
 			{
 				notification_push(notifications.trickytreat_door_entered, [room]);
 			}
-			obj_player1.lastroom = room;
-			obj_player2.lastroom = room;
+			lastroom = room;
 			fmod_event_one_shot("event:/sfx/misc/door");
 			obj_camera.chargecamera = 0;
 			ds_list_add(global.saveroom, id);
-			if (object_index == obj_player1)
+
+			if (isgustavo)
 			{
-				if (obj_player1.isgustavo)
-				{
-					obj_player1.sprite_index = spr_ratmount_enterdoor;
-				}
-				else
-				{
-					obj_player1.sprite_index = obj_player1.spr_lookdoor;
-				}
+				sprite_index = spr_ratmount_enterdoor;
 			}
-			if (object_index == obj_player2)
+			else
 			{
-				obj_player2.sprite_index = obj_player2.spr_lookdoor;
+				sprite_index = spr_lookdoor;
 			}
-			obj_player1.targetDoor = other.targetDoor;
-			obj_player1.targetRoom = other.targetRoom;
-			obj_player2.targetDoor = other.targetDoor;
-			obj_player2.targetRoom = other.targetRoom;
-			with (obj_player)
+			
+			targetDoor = other.targetDoor;
+			targetRoom = other.targetRoom;
+
+			image_index = 0;
+			if (state != states.gotoplayer)
 			{
-				image_index = 0;
-				if (state != states.gotoplayer)
-				{
-					state = states.door;
-				}
-				mach2 = 0;
+				state = states.door;
 			}
+			mach2 = 0;
+
 			other.visited = true;
 			if (ds_list_find_index(global.saveroom, other.id) == -1)
 			{

@@ -12,4 +12,3 @@ with (obj_player)
 }
 sprite_index = spr_noisebomb_intro;
 instance_create(x, y, obj_taunteffect);
-playerid = obj_player1;

@@ -9,14 +9,8 @@ if (other.state != states.gotoplayer)
 	instance_destroy();
 	global.combotime = 60;
 	var val = heat_calculate(value);
-	if (other.object_index == obj_player1)
-	{
-		global.collect += val;
-	}
-	else
-	{
-		global.collectN += val;
-	}
+	global.collect += val;
+
 	if (visible)
 	{
 		create_collect(x, y, sprite_index, val);

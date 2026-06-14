@@ -1,5 +1,5 @@
 
-if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == false)
+if (ds_list_find_index(global.saveroom, id) == -1)
 {
 	repeat (6)
 	{
