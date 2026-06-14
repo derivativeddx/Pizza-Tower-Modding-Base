@@ -1,3 +1,4 @@
+scr_getinput();
 prevhsp = hsp;
 prevmove = move;
 prevmovespeed = movespeed;
