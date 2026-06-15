@@ -1,12 +1,12 @@
-if (state == states.debugstate)
+if (other.state == states.debugstate)
 {
 	exit;
 }
-if (state == states.backtohub)
+if (other.state == states.backtohub)
 {
 	exit;
 }
-if (state == states.titlescreen)
+if (other.state == states.titlescreen)
 {
 	exit;
 }

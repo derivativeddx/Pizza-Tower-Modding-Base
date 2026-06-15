@@ -24,7 +24,7 @@ with (other)
 				instance_destroy();
 			}
 		}
-		if (police)
+		if (other.police)
 		{
 			with (instance_create(x, y, obj_taxicardboard))
 			{

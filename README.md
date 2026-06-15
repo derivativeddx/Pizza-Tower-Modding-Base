@@ -28,3 +28,4 @@ This project is aimed at creating a sustainable and easily extendable base for P
 - **setupwitch** for creating Pizza Tower EXtracted and making PT: Optimized possible
 - **Dockronic** for creating PT: Optimized, the base for this project
 - **26 (lamroja)** for assisting with fixes
+- **Fluffy-Goat4557 (Monno) and Adit1234** for playtesting
