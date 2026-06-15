@@ -67,7 +67,7 @@ for (var i = 0; i < array_length(player_palettes); i++)
 ini_close();
 scr_create_uparrowhitbox();
 paletteselect = 0;
-character = "P";
+character = "";
 showtext = false;
 alpha = 0;
 palettetitle = "";

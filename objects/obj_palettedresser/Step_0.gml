@@ -2,14 +2,17 @@ if (obj_player.character != character)
 {
 	character = obj_player.character;
 	paletteselect = 0;
-	if (obj_player.character == "N")
+	
+	switch (obj_player.character)
 	{
-		palettes = player_palettes[1];
+		case "N":
+			palettes = player_palettes[1];
+			break;
+		
+		default:
+			palettes = player_palettes[0];
 	}
-	else
-	{
-		palettes = player_palettes[0];
-	}
+	
 	with (obj_player)
 	{
 		if (paletteselect > 2)
