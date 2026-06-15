@@ -32,6 +32,14 @@ if (DEBUG)
 {
 	active = false;
 	showoverlay = false;
+	CLEAR = new DebugCommand("clear", "Clears the console output", "", function()
+    {
+        with (obj_debugcontroller)
+        {
+            ds_list_clear(text_list)
+            TextList_Add(debug_texttypes.plain, "Console cleared.")
+        }
+    });
 	SET_GAME_SPEED = new DebugCommand("set_game_speed", "Sets the game speed", "<int>", function(_int)
 	{
 		game_set_speed(floor(real(_int)), gamespeed_fps);
@@ -419,7 +427,7 @@ if (DEBUG)
 	ds_map_set(state_map, "states.firemouth", states.firemouth);
 	ds_map_set(state_map, "states.ratmount", states.ratmount);
 	command_list = ds_list_create();
-	ds_list_add(command_list, DESTROYICE, SET_GAME_SPEED, SHOW_HUD, SHOW_COLLISIONS, PLAYER_ROOM, CAMERA_ZOOM, HARDMODE, PLAYER_SET_STATE, PANIC, ALLTOPPINS, GIVEHEAT, ROOMCHECK, SET_CHARACTER, SET_BOSS_HP);
+	ds_list_add(command_list, DESTROYICE, CLEAR, SET_GAME_SPEED, SHOW_HUD, SHOW_COLLISIONS, PLAYER_ROOM, CAMERA_ZOOM, HARDMODE, PLAYER_SET_STATE, PANIC, ALLTOPPINS, GIVEHEAT, ROOMCHECK, SET_CHARACTER, SET_BOSS_HP);
 	ds_list_add(command_list, OTHERTEST, KILL_BOSS, TEST_P_RANK, FILL_GATESWITCH, SETCOMBO, GIVEKEY, LOADTEST, NOCLIP, THROWARC, HIDETILES, LOCKCAMERA, BOSSINVINCIBLE, UNLOCK_TOPPINS, UNLOCK_BOSS_KEY, SHOW_DEBUG_OVERLAY, GOTOEDITOR);
 	input_text = "";
 	text_list = ds_list_create();
