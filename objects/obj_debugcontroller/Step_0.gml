@@ -21,23 +21,12 @@ if (DEBUG)
 		if (keyboard_check(vk_anykey) && !keyboard_check(vk_f5))
 		{
 			input_text += keyboard_string;
-			for (var i = 0; i < string_length(keyboard_string); i++)
-			{
-				var b = string_char_at(keyboard_string, i + 1);
-				var d = string_upper(b);
-				if (d == "")
-				{
-					d = string_lettersdigits(b);
-				}
-				keyboard_key_release(ord(d));
-			}
 			keyboard_string = "";
 			_search = true;
 		}
-		if (keyboard_check(vk_backspace))
+		if (keyboard_check_pressed(vk_backspace))
 		{
 			input_text = string_delete(input_text, string_length(input_text), 1);
-			keyboard_key_release(vk_backspace);
 			_search = true;
 		}
 		if (keyboard_check_pressed(vk_enter))
@@ -46,7 +35,6 @@ if (DEBUG)
 			input_text = "";
 			keyboard_string = "";
 			_search = true;
-			active = false;
 		}
 		if (_search)
 		{

@@ -71,6 +71,7 @@ if (DEBUG)
 	{
 		if (is_undefined(_newchar))
 		{
+			TextList_Add(debug_texttypes.debug_log, concat("Currently playing as: ", obj_player.character));
 			exit;
 		}
 		with (obj_player)
