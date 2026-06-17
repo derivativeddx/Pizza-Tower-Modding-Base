@@ -51,17 +51,17 @@ for (var i = num; i > 0; i--)
 	_tx -= 22;
 	_ty -= 8;
 }
-var palinfo = get_char_palette_info(obj_player.character);
+
 if (room != rm_blank)
 {
 	draw_sprite_ext(spr_tv_bgfinal, tv_bg_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
 	pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, patterntexture);
-	pal_swap_set(palinfo.spr_palette, paletteselect);
+	pal_swap_set(spr_palette, paletteselect);
 	draw_sprite_ext(sprite_index, image_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
 	var _red = global.noisejetpack && (obj_player.character != "N" || obj_player.noisepizzapepper);
 	if (_red)
 	{
-		pal_swap_set(palinfo.spr_palette, 2);
+		pal_swap_set(spr_palette, 2);
 		draw_sprite_ext(sprite_index, image_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
 	}
 

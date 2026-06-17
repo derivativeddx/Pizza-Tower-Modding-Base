@@ -49,7 +49,6 @@ sprite_index = spr_tv_off;
 bubbleindex = 0;
 bubblespr = noone;
 idleanim = 180;
-//noisesprite = spr_noiseHUD_idle;
 xi = 500;
 yi = 600;
 imageindexstore = 0;
