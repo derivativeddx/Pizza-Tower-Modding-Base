@@ -80,6 +80,31 @@ if (DEBUG)
 			scr_characterspr();
 		}
 	});
+	SET_GLOBAL = new DebugCommand("set_global", "[DANGEROUS] Sets a global variable to a value", "<variable_name> <value>", function(_var, _val)
+	{
+		if (is_undefined(_var) || is_undefined(_val))
+		{
+			TextList_Add(debug_texttypes.error, "Usage: set_global <variable_name> <value>");
+			exit;
+		}
+
+		var _num = get_number_string(_val);
+		if (!is_nan(_num)) // is it a number?
+		{
+			_val = _num;
+		}
+		else // try to interpret as boolean
+		{
+			var _bool = get_bool(string_lower(_val));
+			if (_bool != undefined)
+			{
+				_val = _bool;
+			}
+		}
+
+		variable_global_set(_var, _val);
+		TextList_Add(debug_texttypes.debug_log, concat("Set global.", _var, " to ", string(_val)));
+	});
 	FILL_GATESWITCH = new DebugCommand("gateswitchmax", "", "", function()
 	{
 		global.gateswitch = global.gateswitchmax;
@@ -362,23 +387,6 @@ if (DEBUG)
 		instance_destroy(obj_iceblock);
 		instance_destroy(obj_iceblockslope);
 	});
-	HARDMODE = new DebugCommand("hardmode", "Toggles hardmode", "<bool>", function(_bool)
-	{
-		if (_bool == undefined)
-		{
-			exit;
-		}
-		_bool = get_bool(_bool);
-		show_debug_message(!_bool);
-		if (_bool != undefined)
-		{
-			global.hardmode = _bool;
-			with (obj_hardmode)
-			{
-				event_perform(ev_other, ev_room_start);
-			}
-		}
-	});
 	PLAYER_SET_STATE = new DebugCommand("player_set_state", "Changes the player state", "<states.state>", function(_state)
 	{
 		if (_state == undefined)
@@ -428,7 +436,7 @@ if (DEBUG)
 	ds_map_set(state_map, "states.firemouth", states.firemouth);
 	ds_map_set(state_map, "states.ratmount", states.ratmount);
 	command_list = ds_list_create();
-	ds_list_add(command_list, DESTROYICE, CLEAR, SET_GAME_SPEED, SHOW_HUD, SHOW_COLLISIONS, PLAYER_ROOM, CAMERA_ZOOM, HARDMODE, PLAYER_SET_STATE, PANIC, ALLTOPPINS, GIVEHEAT, ROOMCHECK, SET_CHARACTER, SET_BOSS_HP);
+	ds_list_add(command_list, DESTROYICE, CLEAR, SET_GAME_SPEED, SHOW_HUD, SHOW_COLLISIONS, PLAYER_ROOM, CAMERA_ZOOM, SET_GLOBAL, PLAYER_SET_STATE, PANIC, ALLTOPPINS, GIVEHEAT, ROOMCHECK, SET_CHARACTER, SET_BOSS_HP);
 	ds_list_add(command_list, OTHERTEST, KILL_BOSS, TEST_P_RANK, FILL_GATESWITCH, SETCOMBO, GIVEKEY, LOADTEST, NOCLIP, THROWARC, HIDETILES, LOCKCAMERA, BOSSINVINCIBLE, UNLOCK_TOPPINS, UNLOCK_BOSS_KEY, SHOW_DEBUG_OVERLAY, GOTOEDITOR);
 	input_text = "";
 	text_list = ds_list_create();
